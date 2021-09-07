@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+html, body, #root, .main {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.art {
+  height: 200px;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.pound-logo {
+  position: absolute;
+  height: 200px;
+  width: auto;
+  opacity: 1;
+}
+/* .pound-logo:hover {
+  opacity: 0;
+  transition: opacity 5s ease-in;
+} */
+
+.ep-logo {
+  height: 200px;
+  width: auto;
+  opacity: 0;
+}
+/* .ep-logo:hover {
+  opacity: 1;
+  transition: 7s ease-out;
+} */
+
+.title {
+  opacity: 0;
+  font-family: monospace;
+}
+
+.art:hover .title {
+  opacity: 1;
   color: white;
+  transition: 10s;
 }
 
-.App-link {
-  color: #61dafb;
+.art:hover .pound-log {
+  opacity: 0;
+  transition: 5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.art:hover .ep-logo {
+  opacity: 1;
+  transition: 5s;
 }
+
