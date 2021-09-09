@@ -63,3 +63,38 @@ html, body, #root, .main {
   transition: 5s;
 }
 
+.sound-btn {
+  height: 20px;
+  width: 20px;
+  border: none;
+  background-color: blanchedalmond;
+}
+
+.sound-btn:active {
+  background-color: goldenrod;
+}
+
+.toggle-1 {
+  position: fixed;
+  top: 15px;
+  left: 43px;
+}
+
+.toggle-2 {
+  position: fixed;
+  bottom: 30%;
+  right: 2%;
+}
+
+.toggle-3 {
+  position: fixed;
+  top: 40%;
+  left: 30%;
+}
+
+.toggle-4 {
+  position: fixed;
+  bottom: 20%;
+  left: 65%;
+}
+
