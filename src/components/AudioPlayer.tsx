@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function AudioPlayer(props) {
+export default function AudioPlayer(props: {url:string}) {
   const { url } = props;
 
   const [audio] = useState(new Audio(url));
@@ -14,7 +14,7 @@ export default function AudioPlayer(props) {
       audio.pause();
       audio.currentTime = 0;
     };
-  }, [play]);
+  }, [audio, play]);
 
   const handleToggle = () => {
     setPlay(!play)
@@ -26,11 +26,8 @@ export default function AudioPlayer(props) {
   })
 
   return (
-    <div>
-      <button 
-        onClick={()=>handleToggle()}
-        className="sound-btn"
-      />
+    <div className="btn-container">
+      <button onClick={() => handleToggle()} className={`sound-btn ${play ? 'on' : ''}`} />
     </div>
-  )
+  );
 }
