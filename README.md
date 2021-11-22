@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 ### pound | bnuoq
 
 
 
 
 # HAHAHAHAHHAAHAHHAHAAHAHAHAHAHAAHHAHAHAAHAHAHHAHAHAHHAHAHAAHHAHAHAHAHAHAHHAHAHAHAHAHAHAHAHAAHHA
-=======
-# bnuoq | pound
-
-for upcoming music related details
-
->>>>>>> 3044214f9a64ca88f557cca771677f9cc70c37a2

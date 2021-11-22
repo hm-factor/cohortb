@@ -1,3 +1,5 @@
+/* import './styles/audioplayer.css'; */
+
 html, body, #root, .main {
   height: 100%;
   width: 100%;
@@ -10,6 +12,78 @@ html, body, #root, .main {
   justify-content: center;
   align-items: center;
 }
+
+/* HOMEPAGE */
+
+.homepage-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategrey;
+}
+
+.panel-container {
+  height: 45%;
+  width: 40%;
+}
+
+.panels {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.pane {
+  height: 100%;
+  width: 150px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  font-family: sans-serif;
+  color: plum;
+  position: relative;
+}
+
+.pane:hover {
+  transform: scale(1.05);
+  transition: 500ms ease;
+}
+
+.pane-title {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.pane:hover .pane-title {
+  left: 0;
+  bottom: 70%;
+  transition: left 1s ease;
+  transition: bottom 1000ms ease;
+  transition-delay: bottom 1s;
+}
+
+.pane-body {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+}
+
+.pane:hover .pane-body {
+  opacity: 1;
+  bottom: 30%;
+  transition: 1000ms ease;
+  transition-delay: 1s;
+}
+
+
 
 .art {
   height: 200px;
