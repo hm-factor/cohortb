@@ -1,13 +1,20 @@
 import React from 'react';
 // import sample from '../vids/bar_freda_no_audio_hunter.mov';
+import phallic from '../art/phallic.JPG';
 
 function HomePage () {
 
   return (
     <div className="homepage-container">
       <div className="panel-container">
+        <div className="panel-logo">
+          <img src={phallic} alt="" />
+        </div>
         <div className="panels">
           <div className="pane">
+            {/* <div className="artwork">
+              <img src={phallic} alt="phallic"/>
+            </div> */}
             <div className="pane-content">
               <div className="pane-title">
                 Shows

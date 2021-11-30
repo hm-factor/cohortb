@@ -34,6 +34,27 @@ html, body, #root, .main {
   padding: 0 10%;
 }
 
+.panel-logo {
+  height: 80%;
+  width: 80%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  opacity: 1;
+  z-index: 5;
+  margin: 0;
+}
+
+.panel-logo img {
+  object-fit: contain;
+  margin: 0;
+}
+
+.panel-container:hover .panel-logo {
+  opacity: 0;
+}
+
 .panels {
   height: 100%;
   width: 100%;
@@ -101,6 +122,10 @@ html, body, #root, .main {
   bottom: 30%;
   transition: bottom 1s ease 1.5s,
     opacity 1s ease 2s;
+}
+
+.artwork {
+  object-fit: fill;
 }
 
 
