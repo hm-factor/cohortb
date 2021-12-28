@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import sample from '../vids/bar_freda_no_audio_hunter.mov';
 
 function HomePage () {
 
+  let [isModal, setIsModal] = useState(false);
+
   return (
     <div className="homepage-container">
+      <div className='dropdown'></div>
       <div className="panel-container">
         <div className='placeholder-hover'>
           NAME
