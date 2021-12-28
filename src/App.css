@@ -148,20 +148,12 @@ html, body, #root, .main {
   width: auto;
   opacity: 1;
 }
-/* .pound-logo:hover {
-  opacity: 0;
-  transition: opacity 5s ease-in;
-} */
 
 .ep-logo {
   height: 200px;
   width: auto;
   opacity: 0;
 }
-/* .ep-logo:hover {
-  opacity: 1;
-  transition: 7s ease-out;
-} */
 
 .title {
   opacity: 0;
@@ -184,41 +176,3 @@ html, body, #root, .main {
   transition: 5s;
 }
 
-/* .btn-container {
-  width: 100vw;
-  height: 100vh;
-} */
-
-.horizontal {
-  position: absolute;
-  width: 100vw;
-  height: 0px;
-  border: 1px dotted rgb(221, 133, 18);
-  z-index: 1;
-}
-
-.vertical {
-  position: absolute;
-  height: 100vh;
-  width: 0px;
-  border: 1px dotted rgb(221, 133, 18);
-  z-index: 1;
-}
-
-.sound-btn {
-  height: 60px;
-  width: 60px;
-  border: 1px dotted rgb(221, 133, 18);
-  border-radius: 50%;
-  background-color: black;
-  transition: background-color ease 0.2s;
-  z-index: 5;
-}
-
-.sound-btn:hover, .sound-btn.on {
-  background-color: rgb(221, 133, 18);
-}
-
-.toggle-1, .toggle-2, .toggle-3, .toggle-4 {
-  position: fixed;
-}
