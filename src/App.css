@@ -32,27 +32,26 @@ html, body, #root, .main {
   height: 80%;
   width: 100%;
   padding: 0 10%;
+  position: relative;
+  z-index: 1;
 }
 
-.panel-logo {
-  height: 80%;
+.panel-container:hover .placeholder-hover {
+  opacity: 0;
+  z-index: -1;
+}
+
+.placeholder-hover {
+  position: absolute;
+  z-index: 5;
+  font-size: 10rem;
+  height: 100%;
   width: 80%;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   opacity: 1;
-  z-index: 5;
-  margin: 0;
-}
-
-.panel-logo img {
-  object-fit: contain;
-  margin: 0;
-}
-
-.panel-container:hover .panel-logo {
-  opacity: 0;
 }
 
 .panels {

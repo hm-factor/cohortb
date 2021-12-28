@@ -1,14 +1,17 @@
 import React from 'react';
 // import sample from '../vids/bar_freda_no_audio_hunter.mov';
-import phallic from '../art/phallic.JPG';
+// import phallic from '../art/phallic.JPG';
 
 function HomePage () {
 
   return (
     <div className="homepage-container">
       <div className="panel-container">
-        <div className="panel-logo">
+        {/* <div className="panel-logo">
           <img src={phallic} alt="" />
+        </div> */}
+        <div className='placeholder-hover'>
+          NAME
         </div>
         <div className="panels">
           <div className="pane">
