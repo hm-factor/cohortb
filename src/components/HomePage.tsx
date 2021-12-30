@@ -6,13 +6,20 @@ function HomePage () {
   let [isModal, setIsModal] = useState(false);
 
   function openModal () {
-    setIsModal(!isModal)
+    setIsModal(true)
+  }
+
+  function closeModal () {
+    setIsModal(false)
   }
 
   return (
     <div className="homepage-container">
+      <div className={`dropdown ${isModal ? 'modal-on' : ''}`}>
+        <button onClick={()=>closeModal()}></button>
+        photos here
+      </div>
       <div className="panel-container">
-        <div className={`dropdown ${isModal ? 'modal-on' : ''}`}>hi</div>
         <div className='placeholder-hover'>
           NAME
         </div>
