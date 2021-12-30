@@ -43,11 +43,11 @@ html, body, #root, .main {
   background-color: white;
   color: black;
   z-index: 5;
-  transition: top 500ms ease;
+  transition: top 300ms ease;
 }
 .modal-on {
   top: 0px;
-  transition: top 500ms ease;
+  transition: top 400ms ease;
 }
 
 .panel-container {
