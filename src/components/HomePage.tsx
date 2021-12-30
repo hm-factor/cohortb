@@ -5,10 +5,14 @@ function HomePage () {
 
   let [isModal, setIsModal] = useState(false);
 
+  function openModal () {
+    setIsModal(!isModal)
+  }
+
   return (
     <div className="homepage-container">
-      <div className='dropdown'></div>
       <div className="panel-container">
+        <div className={`dropdown ${isModal ? 'modal-on' : ''}`}>hi</div>
         <div className='placeholder-hover'>
           NAME
         </div>
@@ -23,11 +27,6 @@ function HomePage () {
                 Doloremque velit aliquam facere excepturi vero assumenda.
               </div>
             </div>
-            {/* <div className="video">
-              <video className='videoTag' autoPlay loop muted>
-                  <source src={sample} type='video/mov' />
-              </video>
-            </div> */}
           </div>
           <div className="pane">
             <div className="pane-content">
@@ -37,6 +36,7 @@ function HomePage () {
               <div className="pane-body">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Doloremque velit aliquam facere excepturi vero assumenda.
+                <button onClick={()=>openModal()}>More</button>
               </div>
             </div>
           </div>
