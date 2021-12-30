@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 // import sample from '../vids/bar_freda_no_audio_hunter.mov';
+import trash from '../art/ep_art.jpg';
+import ep_logo from '../art/logo_1.jpg';
+import trees from '../art/trees.jpg';
 
 function HomePage () {
 
@@ -18,15 +21,15 @@ function HomePage () {
       <div className={`dropdown ${isModal ? 'modal-on' : ''}`}>
         photos here.
         <div className='photo-grid'>
-          <div className='item-1'></div>
-          <div className='item-2'></div>
-          <div className='item-3'></div>
-          <div className='item-4'></div>
-          <div className='item-5'></div>
-          <div className='item-6'></div>
-          <div className='item-7'></div>
-          <div className='item-8'></div>
-          <div className='item-9'></div>
+          <div className='item-1'>
+            <img src={trash} alt="trash" />
+          </div>
+          <div className='item-2'>
+            <img src={ep_logo} alt="ep_logo" />
+          </div>
+          <div className='item-3'>
+            <img src={trees} alt="trees" />
+          </div>
         </div>
         <button className='close-modal-btn' onClick={()=>closeModal()}>
           close.
