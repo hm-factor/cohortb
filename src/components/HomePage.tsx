@@ -47,7 +47,7 @@ function HomePage () {
       </div>
       <div className="panel-container">
         <div className='placeholder-hover'>
-          NAME
+          HAHAHAHAHAHA
         </div>
         <div className="panels">
           <div className="pane">
