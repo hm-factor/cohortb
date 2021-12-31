@@ -7,6 +7,7 @@ import trees from '../art/trees.jpg';
 function HomePage () {
 
   let [isModal, setIsModal] = useState(false);
+  let [isGrow, setIsGrow] = useState('');
 
   function openModal () {
     setIsModal(true)
@@ -16,19 +17,27 @@ function HomePage () {
     setIsModal(false)
   }
 
+  function photoGrow (event: any) {
+    if (!isGrow) {
+      console.log(event.target)
+    } else {
+      setIsGrow('')
+    }
+  }
+
   return (
     <div className="homepage-container">
       <div className={`dropdown ${isModal ? 'modal-on' : ''}`}>
         photos here.
         <div className='photo-grid'>
-          <div className='item-1'>
-            <img src={trash} alt="trash" />
+          <div className='photo-square'>
+            <img className={`photo ${isGrow ? 'big' : ''}`} src={trash} alt="trash" onClick={(event)=>photoGrow(event)}/>
           </div>
-          <div className='item-2'>
-            <img src={ep_logo} alt="ep_logo" />
+          <div className='photo-square'>
+            <img className={`photo ${isGrow ? 'big' : ''}`} src={ep_logo} alt="ep_logo" onClick={(event)=>photoGrow(event)}/>
           </div>
-          <div className='item-3'>
-            <img src={trees} alt="trees" />
+          <div className='photo-square'>
+            <img className={`photo ${isGrow ? 'big' : ''}`} src={trees} alt="trees" onClick={(event)=>photoGrow(event)}/>
           </div>
         </div>
         <button className='close-modal-btn' onClick={()=>closeModal()}>
