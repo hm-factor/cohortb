@@ -7,6 +7,7 @@ import trees from '../art/trees.jpg';
 function HomePage () {
 
   let [isModal, setIsModal] = useState(false);
+  let [isShop, setIsShop] = useState(false);
   let [isGrow, setIsGrow] = useState('');
 
   function openModal () {
@@ -18,6 +19,10 @@ function HomePage () {
     setIsModal(false);
   }
 
+    function openShop () {
+      setIsShop(true)
+    }
+
   function photoGrow (alt: string):void {
     if (!isGrow) {
       setIsGrow(alt)
@@ -26,9 +31,11 @@ function HomePage () {
     }
   }
 
+
+
   return (
     <div className='homepage-container'>
-      <div className={`dropdown ${isModal ? 'modal-on' : ''}`}>
+      <div className={`dropdown-top ${isModal ? 'modal-on' : ''}`}>
         photos here.
         <div className='photo-grid'>
           <div className='photo-square'>
@@ -44,6 +51,11 @@ function HomePage () {
         <button className='close-modal-btn' onClick={()=>closeModal()}>
           close.
         </button>
+      </div>
+      <div className={`dropdown-right ${isShop ? 'shop-on' : ''}`}>
+        <div className='shop'>
+          Hello shop
+        </div>
       </div>
       <div className="panel-container">
         <div className='placeholder-hover'>

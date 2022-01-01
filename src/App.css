@@ -23,7 +23,7 @@ html, body, #root, .main {
   position: relative;
 }
 
-.dropdown {
+.dropdown-top {
   position: absolute;
   height: 95%;
   width: 90%;
@@ -49,6 +49,12 @@ html, body, #root, .main {
 .modal-on {
   top: 0px;
   transition: top 400ms linear;
+}
+
+.dropdown-right {
+  position: absolute;
+  right: -100%;
+  
 }
 
 .photo-grid {
