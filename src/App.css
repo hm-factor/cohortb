@@ -117,7 +117,6 @@ html, body, #root, .main {
   height: 80%;
   width: 80%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   border: 1px dashed olivedrab;
