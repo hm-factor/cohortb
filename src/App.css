@@ -51,12 +51,6 @@ html, body, #root, .main {
   transition: top 400ms linear;
 }
 
-.dropdown-right {
-  position: absolute;
-  right: -100%;
-  
-}
-
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(4, 25%);
@@ -93,6 +87,24 @@ html, body, #root, .main {
   background-color: orange;
   color: black;
   transition: all 200ms ease;
+}
+
+.dropdown-right {
+  position: absolute;
+  right: -100%;
+  height: 100%;
+  width: 35%;
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  border: 1px solid white;
+  background-color: black;
+  z-index: 3;
+}
+.shop-on {
+  right: 0;
 }
 
 .panel-container {

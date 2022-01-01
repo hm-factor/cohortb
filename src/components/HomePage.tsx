@@ -19,9 +19,9 @@ function HomePage () {
     setIsModal(false);
   }
 
-    function openShop () {
-      setIsShop(true)
-    }
+  function toggleShop () {
+    setIsShop(!isShop)
+  }
 
   function photoGrow (alt: string):void {
     if (!isGrow) {
@@ -55,6 +55,7 @@ function HomePage () {
       <div className={`dropdown-right ${isShop ? 'shop-on' : ''}`}>
         <div className='shop'>
           Hello shop
+          <button className='close-modal-btn' onClick={toggleShop}>close shop</button>
         </div>
       </div>
       <div className="panel-container">
@@ -93,6 +94,7 @@ function HomePage () {
               <div className="pane-body">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
                 Doloremque velit aliquam facere excepturi vero assumenda.
+                <button onClick={()=>toggleShop()}>More</button>
               </div>
             </div>
           </div>
