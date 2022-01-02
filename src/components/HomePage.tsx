@@ -11,7 +11,8 @@ function HomePage () {
   let [isGrow, setIsGrow] = useState('');
 
   function openModal ():void {
-    setIsModal(true)
+    setIsShop(false);
+    setIsModal(true);
   }
 
   function closeModal ():void {
@@ -20,14 +21,15 @@ function HomePage () {
   }
 
   function toggleShop ():void {
-    setIsShop(!isShop)
+    setIsModal(false);
+    setIsShop(!isShop);
   }
 
   function photoGrow (alt: string):void {
     if (!isGrow) {
-      setIsGrow(alt)
+      setIsGrow(alt);
     } else {
-      setIsGrow('')
+      setIsGrow('');
     }
   }
 
