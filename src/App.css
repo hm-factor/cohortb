@@ -130,6 +130,13 @@ html, body, #root, .main {
   background-color: blueviolet;
   color: white;
   margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop-item:hover {
+  transform: scale(1.05);
 }
 
 .panel-container {
