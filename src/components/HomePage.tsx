@@ -10,16 +10,16 @@ function HomePage () {
   let [isShop, setIsShop] = useState(false);
   let [isGrow, setIsGrow] = useState('');
 
-  function openModal () {
+  function openModal ():void {
     setIsModal(true)
   }
 
-  function closeModal () {
+  function closeModal ():void {
     setIsGrow('');
     setIsModal(false);
   }
 
-  function toggleShop () {
+  function toggleShop ():void {
     setIsShop(!isShop)
   }
 
@@ -83,7 +83,7 @@ function HomePage () {
       </div>
       <div className="panel-container">
         <div className='placeholder-hover'>
-          HAHAHAHAHA
+          Band Name
         </div>
         <div className="panels">
           <div className="pane">
@@ -92,8 +92,7 @@ function HomePage () {
                 Shows
               </div>
               <div className="pane-body">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Doloremque velit aliquam facere excepturi vero assumenda.
+                no upcoming shows...
               </div>
             </div>
           </div>
