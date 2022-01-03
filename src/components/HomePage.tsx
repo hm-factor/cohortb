@@ -37,6 +37,7 @@ function HomePage () {
 
   return (
     <div className='homepage-container'>
+      {/* TOP MODAL */}
       <div className={`dropdown-top ${isModal ? 'modal-on' : ''}`}>
         photos here.
         <div className='photo-grid'>
@@ -54,6 +55,8 @@ function HomePage () {
           close.
         </button>
       </div>
+
+      {/* RIGHT MODAL */}
       <div className={`dropdown-right ${isShop ? 'shop-on' : ''}`}>
         <div className='shop'>
           <div className='shop-item'>
@@ -83,6 +86,8 @@ function HomePage () {
         </div>
         <button className='close-modal-btn' onClick={toggleShop}>close shop</button>
       </div>
+
+      {/* PANELS */}
       <div className="panel-container">
         <div className='placeholder-hover'>
           Band Name
