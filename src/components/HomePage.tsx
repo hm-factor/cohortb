@@ -6,6 +6,8 @@ import trees from '../art/trees.jpg';
 
 function HomePage () {
 
+  // toggles photo and shop modals -- if one is opened while the other is already opened,
+  // itll close the opposite modal
   let [isModal, setIsModal] = useState(false);
   let [isShop, setIsShop] = useState(false);
   let [isGrow, setIsGrow] = useState('');
@@ -32,8 +34,6 @@ function HomePage () {
       setIsGrow('');
     }
   }
-
-
 
   return (
     <div className='homepage-container'>
