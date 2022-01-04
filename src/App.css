@@ -187,6 +187,7 @@ html, body, #root, .main {
   font-family: sans-serif;
   color: plum;
   position: relative;
+  transition: all 500ms ease;
 }
 
 .pane:hover {
@@ -195,14 +196,14 @@ html, body, #root, .main {
 }
 
 .pane-content {
-  background-color: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
 }
 
 .pane:hover .pane-content {
-  background-color: rgba(0, 0, 0, .5);
-  transition: background-color 750ms ease;
+  background: linear-gradient(0deg, rgba(19, 19, 19, 1) 0%, rgba(0,0,0,1) 50%);
+  transition: background 300ms ease;
 }
 
 .pane-title {
