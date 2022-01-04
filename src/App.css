@@ -4,6 +4,7 @@ html, body, #root, .main {
   height: 100%;
   width: 100%;
   margin: 0px;
+  min-width: 1024px;
 }
 
 .main {
@@ -181,7 +182,7 @@ html, body, #root, .main {
   height: 100%;
   width: 20rem;
   margin: 5px;
-  border: 1px solid whitesmoke;
+  border: 2px solid whitesmoke;
   border-radius: 5px;
   background-color: black;
   font-family: sans-serif;
@@ -204,6 +205,10 @@ html, body, #root, .main {
 .pane:hover .pane-content {
   background: linear-gradient(0deg, rgba(19, 19, 19, 1) 0%, rgba(0,0,0,1) 50%);
   transition: background 300ms ease;
+}
+
+.pane-title, .pane-body {
+  margin-left: 5px;
 }
 
 .pane-title {
