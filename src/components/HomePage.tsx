@@ -109,8 +109,7 @@ function HomePage () {
                 Photos
               </div>
               <div className="pane-body">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Doloremque velit aliquam facere excepturi vero assumenda.
+                art brought to you from the minds at {'<band name here>'}
                 <button onClick={()=>openModal()}>More</button>
               </div>
             </div>
@@ -121,8 +120,7 @@ function HomePage () {
                 Merch
               </div>
               <div className="pane-body">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Doloremque velit aliquam facere excepturi vero assumenda.
+                check out the store and buy some goodies
                 <button onClick={()=>toggleShop()}>More</button>
               </div>
             </div>
