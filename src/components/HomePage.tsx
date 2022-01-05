@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 // import sample from '../vids/bar_freda_no_audio_hunter.mov';
-import trash from '../art/ep_art.jpg';
-import ep_logo from '../art/logo_1.jpg';
+import trash from '../art/trash.png';
+import ep_art from '../art/ep_art.jpg';
 import trees from '../art/trees.jpg';
 import hodge from '../art/hodge.jpg';
 import neg_trees from '../art/neg_trees.jpg';
@@ -49,7 +49,7 @@ function HomePage () {
             <img className={`photo${(isGrow==="trash") ? '-big' : ''}`} src={trash} alt="trash" onClick={()=>photoGrow('trash')}/>
           </div>
           <div className='photo-square'>
-            <img className={`photo${(isGrow==="ep_logo") ? '-big' : ''}`} src={ep_logo} alt="ep_logo" onClick={()=>photoGrow('ep_logo')}/>
+            <img className={`photo${(isGrow==="ep_art") ? '-big' : ''}`} src={ep_art} alt="ep_art" onClick={()=>photoGrow('ep_art')}/>
           </div>
           <div className='photo-square'>
             <img className={`photo${(isGrow==="trees") ? '-big' : ''}`} src={trees} alt="trees" onClick={()=>photoGrow('trees')}/>
