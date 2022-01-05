@@ -23,6 +23,7 @@ html, body, #root, .main {
   background-color: black;
   font-size: 16px;
   position: relative;
+  overflow: hidden;
 }
 
 .dropdown-top {
