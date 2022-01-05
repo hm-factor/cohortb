@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import trash from '../art/ep_art.jpg';
 import ep_logo from '../art/logo_1.jpg';
 import trees from '../art/trees.jpg';
+import hodge from '../art/hodge.jpg';
+import neg_trees from '../art/neg_trees.jpg';
+import logo_1 from '../art/logo_1.jpg';
+import pool from '../art/pool.jpg';
 
 function HomePage () {
 
@@ -49,6 +53,18 @@ function HomePage () {
           </div>
           <div className='photo-square'>
             <img className={`photo${(isGrow==="trees") ? '-big' : ''}`} src={trees} alt="trees" onClick={()=>photoGrow('trees')}/>
+          </div>
+          <div className='photo-square'>
+            <img className={`photo${(isGrow==="hodge") ? '-big' : ''}`} src={hodge} alt="hodge" onClick={()=>photoGrow('hodge')}/>
+          </div>
+          <div className='photo-square'>
+            <img className={`photo${(isGrow==="neg_trees") ? '-big' : ''}`} src={neg_trees} alt="neg_trees" onClick={()=>photoGrow('neg_trees')}/>
+          </div>
+          <div className='photo-square'>
+            <img className={`photo${(isGrow==="pool") ? '-big' : ''}`} src={pool} alt="pool" onClick={()=>photoGrow('pool')}/>
+          </div>
+          <div className='photo-square'>
+            <img className={`photo${(isGrow==="logo_1") ? '-big' : ''}`} src={logo_1} alt="logo_1" onClick={()=>photoGrow('logo_1')}/>
           </div>
         </div>
         <button className='close-modal-btn' onClick={()=>closeModal()}>
