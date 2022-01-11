@@ -75,6 +75,7 @@ function HomePage () {
       {/* RIGHT MODAL */}
       <div className={`dropdown-right ${isShop ? 'shop-on' : ''}`}>
         <div className='shop'>
+          SHOP
           <div className='shop-item'>
             this is a shirt
             <button>add to cart.</button>
