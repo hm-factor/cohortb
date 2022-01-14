@@ -74,8 +74,8 @@ function HomePage () {
 
       {/* RIGHT MODAL */}
       <div className={`dropdown-right ${isShop ? 'shop-on' : ''}`}>
+        SHOP
         <div className='shop'>
-          SHOP
           <div className='shop-item'>
             this is a shirt
             <button>add to cart.</button>
@@ -126,7 +126,7 @@ function HomePage () {
                 Photos
               </div>
               <div className="pane-body">
-                art brought to you from the minds at {'<band name here>'}
+                cohort hive mind art
                 <button onClick={()=>openModal()}>More</button>
               </div>
             </div>
