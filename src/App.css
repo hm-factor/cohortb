@@ -201,7 +201,7 @@ sup {
   font-family: sans-serif;
   color: plum;
   position: relative;
-  opacity: .7;
+  opacity: 0;
   transition: all 500ms ease;
 }
 
@@ -243,6 +243,7 @@ sup {
 
 .homepage-container:hover .pane {
   opacity: 1;
+  transition: opacity 1.5s ease;
 }
 
 .pane:hover .pane-title {
