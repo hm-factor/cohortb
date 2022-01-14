@@ -24,6 +24,8 @@ html, body, #root, .main {
   font-size: 16px;
   position: relative;
   overflow: hidden;
+
+  background-image: url(./art/neg_trees.jpg);
 }
 
 .dropdown-top {
@@ -162,8 +164,8 @@ html, body, #root, .main {
   position: absolute;
   z-index: 5;
   font-size: 10rem;
-  color: orangered;
-  text-shadow: 0 0 100px orangered;
+  color: forestgreen;
+  /* text-shadow: 0 0 100px forestgreen; */
   height: 100%;
   width: 80%;
   overflow: hidden;
@@ -172,6 +174,8 @@ html, body, #root, .main {
   align-items: center;
   opacity: 1;
   transition: opacity 1s ease;
+
+  /* backdrop-filter: blur(2px); */
 }
 
 sup {
@@ -197,6 +201,7 @@ sup {
   font-family: sans-serif;
   color: plum;
   position: relative;
+  opacity: .7;
   transition: all 500ms ease;
 }
 
@@ -233,7 +238,11 @@ sup {
 
 .homepage-container:hover .pane-title {
   opacity: 1;
-  transition: opacity 1000ms ease;
+  transition: opacity 750ms ease;
+}
+
+.homepage-container:hover .pane {
+  opacity: 1;
 }
 
 .pane:hover .pane-title {
