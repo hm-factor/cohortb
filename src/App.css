@@ -150,13 +150,13 @@ html, body, #root, .main {
   z-index: 1;
 }
 
-.homepage-container:hover .placeholder-hover {
+.homepage-container:hover .band-name-container {
   opacity: 0;
   z-index: -1;
   transition: z-index 200ms step-end, opacity 300ms ease;
 }
 
-.placeholder-hover {
+.band-name-container {
   position: absolute;
   z-index: 5;
   font-size: 10rem;
@@ -170,6 +170,11 @@ html, body, #root, .main {
   align-items: center;
   opacity: 1;
   transition: opacity 1s ease;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 5rem;
 }
 
 .panels {
