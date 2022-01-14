@@ -107,7 +107,7 @@ function HomePage () {
       {/* PANELS */}
       <div className="panel-container">
         <div className='placeholder-hover'>
-          Band Name
+          COHORT
         </div>
         <div className="panels">
           <div className="pane">
