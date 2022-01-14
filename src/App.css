@@ -225,13 +225,20 @@ sup {
   margin-bottom: 5px;
   font-size: 2.5rem;
   -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.homepage-container:hover .pane-title {
+  opacity: 1;
+  transition: opacity 1000ms ease;
 }
 
 .pane:hover .pane-title {
   left: 0;
   bottom: 70%;
-  transition: left 1.5s ease, 
-    bottom 1000ms ease 1.5s;
+  transition: left 1s ease, 
+    bottom 700ms ease 1s;
 }
 
 .pane-body {
@@ -244,8 +251,8 @@ sup {
 .pane:hover .pane-body {
   opacity: 1;
   bottom: 30%;
-  transition: bottom 1s ease 1.5s,
-    opacity 1s ease 2s;
+  transition: bottom 1s ease 1s,
+    opacity 1s ease 1.5s;
 }
 
 .photo-big {
