@@ -12,6 +12,12 @@ html, body, #root, .main {
   box-sizing: border-box;
 }
 
+:root {
+  --border-color: rgb(230,217,185);
+  --text-color: rgb(34,139,34);
+  --backdrop-color: rgb(160, 82, 45);
+}
+
 /* HOMEPAGE */
 
 .homepage-container {
