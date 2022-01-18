@@ -67,7 +67,7 @@ function HomePage () {
             <img className={`photo${(isGrow==="logo_1") ? '-big' : ''}`} src={logo_1} alt="logo_1" onClick={()=>photoGrow('logo_1')}/>
           </div>
         </div>
-        <button className='close-modal-btn' onClick={()=>closeModal()}>
+        <button className='close-modal-btn' onClick={closeModal}>
           close.
         </button>
       </div>
@@ -101,7 +101,7 @@ function HomePage () {
             <button>add to cart.</button>
           </div>
         </div>
-        <button className='close-modal-btn' onClick={toggleShop}>close shop</button>
+        <button className='close-modal-btn' onClick={toggleShop}>close.</button>
       </div>
 
       {/* PANELS */}
@@ -127,7 +127,7 @@ function HomePage () {
               </div>
               <div className="pane-body">
                 cohort hive mind art
-                <button onClick={()=>openModal()}>More</button>
+                <button onClick={openModal}>More</button>
               </div>
             </div>
           </div>
@@ -138,7 +138,7 @@ function HomePage () {
               </div>
               <div className="pane-body">
                 check out the store and buy some goodies
-                <button onClick={()=>toggleShop()}>More</button>
+                <button onClick={toggleShop}>More</button>
               </div>
             </div>
           </div>
