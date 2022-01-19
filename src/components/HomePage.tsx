@@ -27,7 +27,7 @@ function HomePage () {
   return (
     <div className='homepage-container'>
       {/* TOP MODAL */}
-      <PhotoBank isModal={isModal}/>
+      <PhotoBank isModal={isModal} setIsModal={setIsModal}/>
 
       {/* RIGHT MODAL */}
       <div className={`dropdown-right ${isShop ? 'shop-on' : ''}`}>

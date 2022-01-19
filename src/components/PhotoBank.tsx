@@ -8,24 +8,26 @@ import neg_trees from '../art/neg_trees.jpg';
 import logo_1 from '../art/logo_1.jpg';
 import pool from '../art/pool.jpg';
 
-type PhotoBoothProps = {
-    isModal: Boolean
+type PhotoBankProps = {
+    isModal: Boolean,
+    setIsModal: Function
 }
 
-export default function PhotoBank ({isModal}: PhotoBoothProps) {
+export default function PhotoBank ({isModal, setIsModal}: PhotoBankProps) {
 
     let [isGrow, setIsGrow] = useState('');
 
-    function closeModal ():void {
-        setIsGrow('');
-    }
-
     function photoGrow (alt: string):void {
         if (!isGrow) {
-        setIsGrow(alt);
+            setIsGrow(alt);
         } else {
-        setIsGrow('');
+            setIsGrow('');
         }
+    }
+    
+    function closeModal ():void {
+        setIsGrow('');
+        setIsModal(false);
     }
 
     return (
