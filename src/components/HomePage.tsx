@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import PhotoBank from './PhotoBank';
 import MerchShop from'./MerchShop';
 
@@ -16,7 +16,7 @@ function HomePage () {
 
   function toggleShop ():void {
     setIsModal(false);
-    setIsShop(!isShop);
+    setIsShop(true);
   }
 
   return (
@@ -27,7 +27,7 @@ function HomePage () {
       {/* RIGHT MODAL */}
       <MerchShop isShop={isShop} setIsShop={setIsShop}/>
 
-      {/* PANELS */}
+      {/* MAIN CONTENT */}
       <div className="panel-container">
         <div className='band-name-container'>
           <p>COHORT <sup>(b)</sup></p>

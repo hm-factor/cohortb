@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import trash from '../art/trash.png';
 import ep_art from '../art/ep_art.jpg';

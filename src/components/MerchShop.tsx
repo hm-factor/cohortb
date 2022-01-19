@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 type MerchShopProps = {
     isShop: Boolean,
     setIsShop: Function
@@ -13,7 +11,7 @@ export default function MerchShop ({isShop, setIsShop}:MerchShopProps) {
 
     return (
         <>
-        <div className={`dropdown-right ${isShop ? 'shop-on' : ''}`}>
+            <div className={`dropdown-right ${isShop ? 'shop-on' : ''}`}>
                 SHOP
                 <div className='shop'>
                     <div className='shop-item'>
