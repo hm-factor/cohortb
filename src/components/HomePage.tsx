@@ -7,17 +7,11 @@ function HomePage () {
   // itll close the opposite modal
   let [isModal, setIsModal] = useState(false);
   let [isShop, setIsShop] = useState(false);
-  // let [isGrow, setIsGrow] = useState('');
 
   function openModal ():void {
     setIsShop(false);
     setIsModal(true);
   }
-
-  // function closeModal ():void {
-  //   setIsGrow('');
-  //   setIsModal(false);
-  // }
 
   function toggleShop ():void {
     setIsModal(false);
