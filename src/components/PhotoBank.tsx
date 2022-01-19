@@ -8,7 +8,11 @@ import neg_trees from '../art/neg_trees.jpg';
 import logo_1 from '../art/logo_1.jpg';
 import pool from '../art/pool.jpg';
 
-export default function PhotoBank (isModal) {
+type PhotoBoothProps = {
+    isModal: Boolean
+}
+
+export default function PhotoBank ({isModal}: PhotoBoothProps) {
 
     let [isGrow, setIsGrow] = useState('');
 

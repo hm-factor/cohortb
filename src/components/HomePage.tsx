@@ -44,7 +44,7 @@ function HomePage () {
   return (
     <div className='homepage-container'>
       {/* TOP MODAL */}
-      <div className={`dropdown-top ${isModal ? 'modal-on' : ''}`}>
+      {/* <div className={`dropdown-top ${isModal ? 'modal-on' : ''}`}>
         photos here.
         <div className='photo-grid'>
           <div className='photo-square'>
@@ -72,7 +72,7 @@ function HomePage () {
         <button className='close-modal-btn' onClick={closeModal}>
           close.
         </button>
-      </div>
+      </div> */}
       <PhotoBank isModal={isModal}/>
 
 
