@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 // import sample from '../vids/bar_freda_no_audio_hunter.mov';
+
+import PhotoBank from './PhotoBank';
 import trash from '../art/trash.png';
 import ep_art from '../art/ep_art.jpg';
 import trees from '../art/trees.jpg';
@@ -71,6 +73,9 @@ function HomePage () {
           close.
         </button>
       </div>
+      <PhotoBank isModal={isModal}/>
+
+
 
       {/* RIGHT MODAL */}
       <div className={`dropdown-right ${isShop ? 'shop-on' : ''}`}>
