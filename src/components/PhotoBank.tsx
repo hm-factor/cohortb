@@ -8,9 +8,9 @@ import neg_trees from '../art/neg_trees.jpg';
 import logo_1 from '../art/logo_1.jpg';
 import pool from '../art/pool.jpg';
 
-type PhotoBankProps = {
-    isModal: Boolean,
-    setIsModal: Function
+interface PhotoBankProps {
+    isModal: Boolean;
+    setIsModal: Function;
 }
 
 export default function PhotoBank ({isModal, setIsModal}: PhotoBankProps) {

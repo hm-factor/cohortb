@@ -1,6 +1,6 @@
-type PanelsProps = {
-    setIsShop: Function,
-    setIsModal: Function
+interface PanelsProps {
+    setIsShop: Function;
+    setIsModal: Function;
 }
 
 export default function Panels ({setIsShop, setIsModal}: PanelsProps) {

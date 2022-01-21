@@ -1,6 +1,6 @@
-type MerchShopProps = {
-    isShop: Boolean,
-    setIsShop: Function
+interface MerchShopProps {
+    isShop: Boolean;
+    setIsShop: Function;
 }
 
 export default function MerchShop ({isShop, setIsShop}:MerchShopProps) {
