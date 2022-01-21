@@ -198,7 +198,7 @@ sup {
   justify-content: space-evenly;
 }
 
-.pane {
+.panel {
   height: 100%;
   width: 20rem;
   margin: 5px;
@@ -212,27 +212,27 @@ sup {
   transition: all 500ms ease;
 }
 
-.pane:hover {
+.panel:hover {
   transform: scale(1.05);
   transition: 500ms ease;
 }
 
-.pane-content {
+.panel-content {
   background: rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
 }
 
-.pane:hover .pane-content {
+.panel:hover .panel-content {
   background: linear-gradient(0deg, rgba(19, 19, 19, 1) 0%, rgba(0,0,0,1) 30%, var(--backdrop-color));
   transition: background 300ms ease;
 }
 
-.pane-title, .pane-body {
+.panel-title, .panel-body {
   margin-left: 5px;
 }
 
-.pane-title {
+.panel-title {
   position: absolute;
   bottom: 0;
   left: 30%;
@@ -243,31 +243,31 @@ sup {
   transition: opacity 300ms ease;
 }
 
-.homepage-container:hover .pane-title {
+.homepage-container:hover .panel-title {
   opacity: 1;
   transition: opacity 750ms ease;
 }
 
-.homepage-container:hover .pane {
+.homepage-container:hover .panel {
   opacity: 1;
   transition: opacity 1.5s ease;
 }
 
-.pane:hover .pane-title {
+.panel:hover .panel-title {
   left: 0;
   bottom: 70%;
   transition: left 1s ease, 
     bottom 700ms ease 1s;
 }
 
-.pane-body {
+.panel-body {
   color: var(--text-color);
   opacity: 0;
   position: absolute;
   bottom: 10px;
 }
 
-.pane:hover .pane-body {
+.panel:hover .panel-body {
   opacity: 1;
   bottom: 30%;
   transition: bottom 1s ease 1s,
@@ -284,54 +284,3 @@ sup {
   max-width: 100%;
   max-height: 100%;
 }
-
-
-/* 
-.artwork {
-  object-fit: fill;
-}
-
-.art {
-  height: 200px;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 400;
-  border: 1px dotted rgb(221, 133, 18);
-}
-
-.pound-logo {
-  position: absolute;
-  height: 200px;
-  width: auto;
-  opacity: 1;
-}
-
-.ep-logo {
-  height: 200px;
-  width: auto;
-  opacity: 0;
-}
-
-.title {
-  opacity: 0;
-  font-family: monospace;
-}
-
-.art:hover .title {
-  opacity: 1;
-  color: white;
-  transition: 10s;
-}
-
-.art:hover .pound-log {
-  opacity: 0;
-  transition: 5s;
-}
-
-.art:hover .ep-logo {
-  opacity: 1;
-  transition: 5s;
-} */
