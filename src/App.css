@@ -8,14 +8,15 @@ html, body, #root, .main {
   min-height: 850px;
 }
 
-.main {
-  box-sizing: border-box;
-}
-
 :root {
   --border-color: rgb(230,217,185);
   --backdrop-color: rgb(31,61,12);
   --text-color: rgb(160, 82, 45);
+
+}
+
+.main {
+  box-sizing: border-box;
 }
 
 /* HOMEPAGE */
@@ -83,7 +84,7 @@ html, body, #root, .main {
   filter: blur(1px);
 }
 
-.close-modal-btn {
+.close-modal-btn, .open-modal-btn {
   text-align: center;
   width: 4rem;
   height: 2rem;
@@ -93,12 +94,16 @@ html, body, #root, .main {
   border-radius: 5px;
   transition: all 200ms ease;
 }
-.close-modal-btn:hover {
+.close-modal-btn:hover, .open-modal-btn:hover {
   cursor: pointer;
   transform: scale(1.1);
   background-color: var(--backdrop-color);
   color: var(--text-color);
   transition: all 200ms ease;
+}
+
+.open-modal-btn {
+  background-color: transparent;
 }
 
 .dropdown-right {
@@ -143,6 +148,7 @@ html, body, #root, .main {
   width: 300px;
   background-color: var(--backdrop-color);
   color: var(--text-color);
+  border: dotted 1px var(--border-color);
   margin: 10px 0;
   display: flex;
   flex-direction: column;
