@@ -1,4 +1,4 @@
-/* .sound-btn {
+.sound-btn {
   height: 60px;
   width: 60px;
   border: 1px dotted rgb(221, 133, 18);
@@ -10,4 +10,4 @@
 
 .sound-btn:hover, .sound-btn.on {
   background-color: rgb(221, 133, 18);
-} */
+}

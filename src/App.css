@@ -35,6 +35,37 @@ html, body, #root, .main {
     background-image: url(./art/neg_trees.jpg);
 }
 
+.hidden-input {
+    border: none;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+    background: transparent;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 750ms ease;
+    cursor: default;
+}
+.hidden-input:focus {
+    outline: none;
+}
+.homepage-container:hover .hidden-input {
+    opacity: 1;
+    transition: opacity 4s ease;
+}
+
+.audio-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    opacity: .7;
+}
+.audio-container img {
+    max-height: 1rem;
+    max-width: 1rem;
+}
+
 .dropdown-top {
     position: absolute;
     height: 95%;

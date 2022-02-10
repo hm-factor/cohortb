@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import vol from '../icons/vol.png';
 
 export default function AudioPlayer(props: {url:string}) {
   const { url } = props;
@@ -26,8 +27,8 @@ export default function AudioPlayer(props: {url:string}) {
   })
 
   return (
-    <div className="btn-container">
-      <button onClick={() => handleToggle()} className={`sound-btn ${play ? 'on' : ''}`} />
+    <div className={`${play ? 'audio-container' : ' '}`}>
+      <img src={vol} alt="vol" />
     </div>
   );
 }

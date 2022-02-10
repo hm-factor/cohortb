@@ -2,6 +2,9 @@ import { useState } from 'react';
 import PhotoBank from './PhotoBank';
 import MerchShop from'./MerchShop';
 import Panels from './Panels';
+import AudioPlayer from './AudioPlayer';
+
+import rust from '../sound/chrt_clip.mp3';
 
 function HomePage () {
     // toggles photo and shop modals -- if one is opened while the other is already opened,
@@ -11,6 +14,10 @@ function HomePage () {
 
     return (
         <div className='homepage-container'>
+            {/* cheat codes */}
+            <input type="text" placeholder="COHORT B" className='hidden-input'/>
+            <AudioPlayer url={rust}/>
+
             {/* TOP MODAL */}
             <PhotoBank isModal={isModal} setIsModal={setIsModal}/>
 

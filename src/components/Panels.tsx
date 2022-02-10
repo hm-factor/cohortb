@@ -33,7 +33,7 @@ export default function Panels ({setIsShop, setIsModal}: PanelsProps) {
                 <div className="panel">
                     <div className="panel-content">
                         <div className="panel-title">
-                            Photos
+                            Artwork
                         </div>
                         <div className="panel-body">
                             <p>cohort hive mind art</p>
