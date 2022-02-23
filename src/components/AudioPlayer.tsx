@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import vol from '../icons/vol.png';
 
-export default function AudioPlayer(props: {url:string}) {
-  const { url } = props;
+export default function AudioPlayer(props: {url:string, play:boolean, setPlay:Function}) {
+  const { url, play, setPlay } = props;
 
-  const [audio] = useState(new Audio(url));
-  const [play, setPlay] = useState(false);
+  const [audio] = useState(new Audio(url))
 
   useEffect(()=>{
     play ? audio.play() : audio.pause();
@@ -15,11 +14,12 @@ export default function AudioPlayer(props: {url:string}) {
       audio.pause();
       audio.currentTime = 0;
     };
-  }, [audio, play]);
 
-  const handleToggle = () => {
-    setPlay(!play)
-  };
+    audio.addEventListener('ended', () => setPlay(false));
+    return () => {
+      audio.removeEventListener('ended', () => setPlay(false));
+    };
+  }, [audio, play, setPlay]);
 
   audio.addEventListener('ended', function() {
     audio.currentTime = 0;
@@ -27,8 +27,8 @@ export default function AudioPlayer(props: {url:string}) {
   })
 
   return (
-    <div className={`${play ? 'audio-container' : ' '}`}>
-      <img src={vol} alt="vol" />
+    <div className={`audio-container ${play ? 'on' : 'off'}`}>
+      <img className={`${play ? 'on' : 'off'}`} src={vol} alt="vol" />
     </div>
   );
 }
