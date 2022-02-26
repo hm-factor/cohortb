@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Prompt:wght@600&display=swap');
+
 html, body, #root, .main {
     height: 100vh;
     width: 100vw;
@@ -405,16 +407,17 @@ sup {
     top: 50%;
     bottom: 50%;
 
-    background: darkred;
-    width: fit-content;
-    height: fit-content;
-    padding: 2rem;
-
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
     box-shadow: -2px 2px 3px 1px rgb(0 0 0 / 30%);
+    background: darkred;
+
+    font-family: prompt;
 }
 
 .nav-element {
@@ -425,7 +428,6 @@ sup {
 }
 .nav-element:hover {
     background-color: rgb(65, 65, 65);
-    color: black;
     border-radius: 3px;
 }
 
@@ -442,14 +444,29 @@ sup {
     align-items: center; 
     justify-content: center;
 
-    font-family: impact;
+    font-family: prompt;
     margin: 1rem;
     cursor: default;
 }
-.cb:hover {
-    transform: scale(1.05);
-}
 .cb-mobile {
+    display: none;
+}
+
+.popup-content {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    border: 1px solid black;
+    height: 400px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.off {
     display: none;
 }
 
