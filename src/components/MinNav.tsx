@@ -1,13 +1,12 @@
 
-
 export default function MinNav() {
 
     return (
-        <div className="minimal-nav">
-            <div className="logo">
+        <div className="min-nav">
+            <div className="nav-logo">
                 CB.
             </div>
-            <div className="controls">
+            <div className="nav-controls">
                 <div>Music</div>
                 <div>Artwork</div>
                 <div>Shows</div>

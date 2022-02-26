@@ -1,6 +1,6 @@
 import './App.css';
 // import HomePage from './components/HomePage.tsx';
-import MinimalHome from './components/Minimal.tsx';
+import Rust from './components/Rust';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="main">
       {/* <HomePage/> */}
-      <MinimalHome/>
+      <Rust />
     </div>
   );
 }
