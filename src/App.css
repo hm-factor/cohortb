@@ -416,6 +416,7 @@ sup {
 
     box-shadow: -2px 2px 3px 1px rgb(0 0 0 / 30%);
 }
+
 .nav-element {
     margin: 1rem;
     padding: 1rem;
@@ -428,22 +429,28 @@ sup {
     border-radius: 3px;
 }
 
-.cb {
+.cb, .cb-mobile {
     background-color: #fff;
     border: 2px solid black;    
     height: 2rem;
+    width: 2rem;
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
-    width: 2rem;
     color: black;
-    display: flex; /* or inline-flex */
+    display: flex;
     align-items: center; 
     justify-content: center;
 
     font-family: impact;
     margin: 1rem;
     cursor: default;
+}
+.cb:hover {
+    transform: scale(1.05);
+}
+.cb-mobile {
+    display: none;
 }
 
 /* IPHONE X */
@@ -457,6 +464,8 @@ sup {
         background-position-y: 120%;
         background-size: 500px;
         background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
     }
 
     .rust-nav {
@@ -472,5 +481,9 @@ sup {
     .cb {
         display: none;
     }
-
+    .cb-mobile {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+    }
 }
