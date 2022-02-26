@@ -399,6 +399,8 @@ sup {
     background-position-y: -200px;
     background-size: 1800px;
     background-repeat: no-repeat;
+
+    user-select: none;
 }
 
 .rust-nav {
@@ -457,15 +459,30 @@ sup {
     top: 2rem;
     right: 2rem;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 400px;
     width: 400px;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    font-family: prompt;
+    background-color: rgba(255, 255, 255, .7);
 }
+
+.popup-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popup-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
 .off {
     display: none;
 }
@@ -481,8 +498,11 @@ sup {
         background-position-y: 120%;
         background-size: 500px;
         background-repeat: no-repeat;
+        overflow: hidden;
+
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .rust-nav {
@@ -500,7 +520,28 @@ sup {
     }
     .cb-mobile {
         display: flex;
+        position: absolute;
+        top: 0;
         width: 3rem;
         height: 3rem;
+    }
+
+    .popup-content {
+        /* border: 1px solid black; */
+        position: unset;
+        top: unset;
+        right: unset;
+        height: 400px;
+        width: 400px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: prompt;
+        background-color: rgba(255, 255, 255, .7);
+    }
+    .off {
+        display: none;
     }
 }
