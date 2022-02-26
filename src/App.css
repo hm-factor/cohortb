@@ -469,6 +469,8 @@ sup {
 
     font-family: prompt;
     background-color: rgba(255, 255, 255, .7);
+
+    overflow: hidden;
 }
 
 .popup-links {
@@ -486,6 +488,17 @@ sup {
     color: darkred;
 }
 
+.popup-photo {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+}
+.photo-content img {
+    height: 100%;
+    width: 100%;
+}
 .off {
     display: none;
 }
@@ -493,7 +506,7 @@ sup {
 /* IPHONE X */
 @media only screen 
   and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
+  and (max-device-width: 900px) 
   and (-webkit-min-device-pixel-ratio: 3) { 
 
     .rust-main {
@@ -507,6 +520,7 @@ sup {
         justify-content: center;
         align-items: center;
     }
+
 
     .rust-nav {
         bottom: 0;
@@ -529,8 +543,12 @@ sup {
         height: 3rem;
     }
 
+    .content-mobile {
+        position: absolute;
+        top: 5.3rem;
+    }
+
     .popup-content {
-        /* border: 1px solid black; */
         position: unset;
         top: unset;
         right: unset;
