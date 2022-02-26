@@ -482,6 +482,9 @@ sup {
     font-size: 2rem;
     line-height: 2rem;
 }
+.popup-links a:hover {
+    color: darkred;
+}
 
 .off {
     display: none;
@@ -495,7 +498,7 @@ sup {
 
     .rust-main {
         background-position-x: 0;
-        background-position-y: 120%;
+        background-position-y: 110%;
         background-size: 500px;
         background-repeat: no-repeat;
         overflow: hidden;
