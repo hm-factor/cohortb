@@ -1,11 +1,10 @@
-import { useState } from "react"
-
-import hodge from '../art/hodge.jpg'
-import logo_1 from '../art/logo_1.jpg'
-import neg_trees from '../art/neg_trees.jpg'
-import pool from '../art/pool.jpg'
-import trees from '../art/trees.jpg'
-// import trash from '../art/trash.png'
+import { useState } from "react";
+import hodge from '../art/hodge.jpg';
+import logo_1 from '../art/logo_1.jpg';
+import neg_trees from '../art/neg_trees.JPG';
+import pool from '../art/pool.JPG';
+import trees from '../art/trees.JPG';
+// import trash from '../art/trash.png';
 
 function Popup(props: {contentType:string}) {
     let {contentType} = props;
