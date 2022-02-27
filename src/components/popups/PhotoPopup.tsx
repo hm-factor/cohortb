@@ -35,7 +35,7 @@ export function PhotoPopup() {
 
     return (
         <div className="popup-content">
-            <div className={`popup-photo photo`}>
+            <div className={"popup-photo photo"}>
                 {photoContent}
             </div>
         </div>

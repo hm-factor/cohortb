@@ -1,14 +1,10 @@
-import { Link, Routes, Route, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import { PhotoPopup } from "./popups/PhotoPopup";
 import { InfoPopup } from "./popups/InfoPopup";
 import { SoundPopup } from "./popups/SoundPopup";
 
 
 function NavBar() {
-    const displayActive = (isActive: boolean) => (
-        isActive ? "nav-element nav-element-active" : "nav-element"
-    );
-
     return (
         <nav className="rust-nav">
             <NavLink to="/" className="cb">cb.</NavLink>
