@@ -2,16 +2,16 @@ import { useState } from "react";
 
 import hodge from '../art/hodge.jpg';
 import logo_1 from '../art/logo_1.jpg';
-import neg_trees from '../art/neg_trees.JPG';
-import pool from '../art/pool.JPG';
-import trees from '../art/trees.JPG';
+import neg_trees from '../art/neg_trees.jpg';
+import pool from '../art/pool.jpg';
+import trees from '../art/trees.jpg';
 
 import blue_rust from '../art/blue_rust.jpg';
 import crane from '../art/crane.jpeg';
 import h_and_j from '../art/h_and_j.jpg';
-import i_hate_this from '../art/i_hate_this.JPG';
+import i_hate_this from '../art/i_hate_this.jpg';
 import red from '../art/red.jpg';
-import shake_full from '../art/shake_full.JPG';
+import shake_full from '../art/shake_full.jpg';
 
 
 
