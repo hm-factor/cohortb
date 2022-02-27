@@ -518,8 +518,6 @@ sup {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        /* background: linear-gradient(180deg, rgb(0,0,0,1), rgb(255,255,255,1)); */
     }
 
 
