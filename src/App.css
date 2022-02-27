@@ -505,9 +505,8 @@ sup {
 
 /* IPHONE X */
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 900px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
+  and (min-device-width: 280px) 
+  and (max-device-width: 1024px) { 
 
     .rust-main {
         background-position-x: 0;
