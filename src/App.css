@@ -389,6 +389,8 @@ sup {
 	}
 }
 
+/* RUST MAIN */
+
 .rust-main {
     height: 100%;
     width: 100%;
@@ -455,6 +457,7 @@ sup {
 
     font-family: prompt;
     margin: 1rem;
+    text-decoration: none;
     cursor: default;
 }
 .cb-mobile {
