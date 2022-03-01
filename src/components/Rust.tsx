@@ -1,7 +1,10 @@
 import { Routes, Route, NavLink } from "react-router-dom";
+import { useState } from "react";
 import { PhotoPopup } from "./popups/PhotoPopup";
 import { InfoPopup } from "./popups/InfoPopup";
 import { SoundPopup } from "./popups/SoundPopup";
+import TerminalPopup from "./popups/TerminalPopup";
+
 
 
 function NavBar() {
@@ -16,14 +19,17 @@ function NavBar() {
 }
 
 export default function Rust() {
+    let [isTerminal, setIsTerminal] = useState(false)
+
     return (
         <div className="rust-main">
             <div className="cb-mobile">cb.</div>
+            <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
             <NavBar />
             <Routes>
-                <Route path="photos" element={<PhotoPopup />} />
-                <Route path="info" element={<InfoPopup />} />
                 <Route path="sound" element={<SoundPopup />} />
+                <Route path="photos" element={<PhotoPopup />} />
+                <Route path="info" element={<InfoPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>} />
             </Routes>
         </div>
     )
