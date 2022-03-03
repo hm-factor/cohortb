@@ -562,7 +562,7 @@ sup {
     padding: 1rem;
 }
 
-.song-title {
+.song-title, .lyrics {
     position: relative;
 }
 .redacted::after {
