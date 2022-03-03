@@ -562,6 +562,18 @@ sup {
     padding: 1rem;
 }
 
+.song-title {
+    position: relative;
+}
+.redacted::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    content: "[redacted]";
+    z-index: 1;
+    background: white;
+    color: black;
+}
 .song-title:hover, .about-bio:hover {
     background: white;
     color: black;
@@ -583,7 +595,6 @@ sup {
         justify-content: center;
         align-items: center;
     }
-
 
     .rust-nav {
         bottom: 0;
