@@ -46,7 +46,7 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     molestiae autem ipsum id, veritatis doloremque ullam eveniet?
                 </div>
 
-                <div className="lyrics redacted" id="traffic">
+                <div className="lyrics lyrics-redacted" id="traffic">
                     Has it kicked in?
                     All of his tendon 
                     All of his skin
@@ -76,7 +76,7 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     Have I seen enough?
                 </div>
 
-                <div className="lyrics redacted" id="dogbite">
+                <div className="lyrics lyrics-redacted" id="dogbite">
                     Aint no one wholl let you know when youre hanging loose
                     But theyll tell you that its for a cause
                     And when your efforts dont cut it 
@@ -126,7 +126,7 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     Whyd you give up on me
                     Why wont you give me —
                 </div>
-                <div className="lyrics redacted" id="purse">
+                <div className="lyrics lyrics-redacted" id="purse">
                     If i could be just a bit stronger,
                     would I even be an option?
                     if i could grow an inch or two,
@@ -216,7 +216,7 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     if i could be frank 
                     no one knows what this man was like
                 </div>
-                <div className="lyrics redacted" id="orca">
+                <div className="lyrics lyrics-redacted" id="orca">
                     shes got his hand pressed against his breast
                     connection; a subtle form of arrest 
                     at least thats the impression that he gets
