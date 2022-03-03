@@ -1,6 +1,6 @@
 import hodge from '../../art/hodge.jpg';
 import logo_1 from '../../art/logo_1.jpg';
-import neg_trees from '../../art/neg_trees.jpg';
+import neg_trees from '../../art/neg_trees.JPG';
 import pool from '../../art/pool.JPG';
 import trees from '../../art/trees.JPG';
 import crane from '../../art/crane.jpeg';
