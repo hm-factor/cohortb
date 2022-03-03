@@ -649,8 +649,8 @@ sup {
     }
 
     .popup-content {
-        position: unset;
-        top: unset;
+        /* position: unset; */
+        top: 5rem;
         right: unset;
         height: 400px;
         width: 400px;
@@ -670,7 +670,7 @@ sup {
         right: unset;
         bottom: unset;
 
-        width: 90%;
+        width: 98%;
         height: 70%;
     }
 }
