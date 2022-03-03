@@ -4,7 +4,7 @@ import trash from '../art/trash.png';
 import ep_art from '../art/ep_art.jpg';
 import trees from '../art/trees.jpg';
 import hodge from '../art/hodge.jpg';
-import neg_trees from '../art/neg_trees.jpg';
+// import neg_trees from '../art/neg_trees.jpg';
 import logo_1 from '../art/logo_1.jpg';
 import pool from '../art/pool.jpg';
 
@@ -47,9 +47,9 @@ export default function PhotoBank ({isModal, setIsModal}: PhotoBankProps) {
                     <div className='photo-square'>
                         <img className={`photo${(isGrow==="hodge") ? '-big' : ''}`} src={hodge} alt="hodge" onClick={()=>photoGrow('hodge')}/>
                     </div>
-                    <div className='photo-square'>
+                    {/* <div className='photo-square'>
                         <img className={`photo${(isGrow==="neg_trees") ? '-big' : ''}`} src={neg_trees} alt="neg_trees" onClick={()=>photoGrow('neg_trees')}/>
-                    </div>
+                    </div> */}
                     <div className='photo-square'>
                         <img className={`photo${(isGrow==="pool") ? '-big' : ''}`} src={pool} alt="pool" onClick={()=>photoGrow('pool')}/>
                     </div>
