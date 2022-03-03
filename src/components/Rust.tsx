@@ -23,6 +23,7 @@ export default function Rust() {
 
     return (
         <div className="rust-main">
+            <div className="cohort-b">COHORT B</div>
             <div className="cb-mobile">cb.</div>
             <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
             <NavBar />

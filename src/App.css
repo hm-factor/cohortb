@@ -599,10 +599,21 @@ sup {
     color: black;
 }
 
+.cohort-b {
+    position: relative;
+    top: .5rem;
+    left: 1rem;
+    font-family: prompt;
+}
+
 /* IPHONE X */
 @media only screen 
   and (min-device-width: 280px) 
   and (max-device-width: 1024px) { 
+
+    .cohort-b {
+        display: none;
+    }
 
     .rust-main {
         background-position-x: 0;
