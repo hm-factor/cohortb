@@ -75,7 +75,6 @@ html, body, #root, .main {
     font-size: 16px;
     position: relative;
     overflow: hidden;
-
 }
 
 .hidden-input {
@@ -402,6 +401,7 @@ sup {
     background-repeat: no-repeat;
 
     user-select: none;
+    overflow: hidden;
 }
 
 .rust-nav {
