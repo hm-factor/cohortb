@@ -76,7 +76,7 @@ html, body, #root, .main {
     position: relative;
     overflow: hidden;
 
-    background-image: url(./art/neg_trees.jpg);
+    /* background-image: url(./art/neg_trees.jpg); */
 }
 
 .hidden-input {
