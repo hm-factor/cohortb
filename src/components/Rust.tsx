@@ -5,8 +5,8 @@ import { InfoPopup } from "./popups/InfoPopup";
 import { SoundPopup } from "./popups/SoundPopup";
 import TerminalPopup from "./popups/TerminalPopup";
 
-import rain from '../art/rain.jpeg';
 import trash from '../art/trash.png';
+import rain from '../art/rain.jpeg';
 
 function NavBar() {
     return (
@@ -21,10 +21,21 @@ function NavBar() {
 
 export default function Rust() {
     let [isTerminal, setIsTerminal] = useState(false)
+    let [background, setBackground] = useState(trash);
+
+    
 
     return (
-        <div className="rust-main" style={{backgroundImage:`url(${trash})`}}>
+        <div className="rust-main" style={{backgroundImage:`url(${background})`}}>
             <div className="cohort-b">COHORT B</div>
+            <div>
+                <div onClick={()=>setBackground(trash)}>
+                    rust
+                </div>
+                <div onClick={()=>setBackground(rain)}>
+                    dog
+                </div>
+            </div>
             <div className="cb-mobile">cb.</div>
             <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
             <NavBar />
