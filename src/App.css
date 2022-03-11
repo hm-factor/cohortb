@@ -192,6 +192,9 @@ html, body, #root, .main {
     overflow-y: scroll;
     overflow-x: hidden;
 }
+.terminal-tag {
+    margin: 1rem 0;
+}
 .terminal-about, .lyrics {
     padding: 1rem;
 }
