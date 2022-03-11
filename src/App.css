@@ -28,7 +28,7 @@ html, body, #root, .main {
     width: 100%;
     position: relative;
 
-    /* background-image: url('./art/trash.png'); */
+    background-image: url('./art/trash.png');
     background-position-x: -200px;
     background-position-y: -200px;
     background-size: 1800px;
@@ -309,4 +309,24 @@ html, body, #root, .main {
 
 .off {
     display: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(255,255,255,.4); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(37, 37, 37);
+    border-radius: 5px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkred; 
 }
