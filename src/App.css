@@ -316,12 +316,12 @@ html, body, #root, .main {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(255,255,255,.4); 
+    background: rgb(255,255,255,.4); 
 }
  
 /* Handle */
@@ -332,5 +332,5 @@ html, body, #root, .main {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: darkred; 
+    background: darkred; 
 }
