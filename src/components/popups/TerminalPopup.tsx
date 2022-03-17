@@ -29,6 +29,17 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     <div className="terminal-tag about">
                         <h3 className="about-bio">about</h3>
                     </div>
+                    <div className="terminal-about" id="terminal-about">
+                        Formed in January 2020, Cohort B is an avant-punk outfit 
+                        born out of Queens, New York. While members Hunter Factor, 
+                        Jhonny Núñez, and Don Pardo all share a similar, yet 
+                        eclectic taste of musical influences, their sound is 
+                        reminiscent of the sickening rhythms of 80's no-wave 
+                        mixed with fierce hardcore aggression, by way of prog-rock 
+                        style songwriting execution. The goal is to corral their 
+                        followers along in the process, leaving them asking 
+                        questions like "what the fuck is that sound?"
+                    </div>
                     <div className="terminal-tag lyrics-tags">
                         <h3>lyrics</h3>
                         <div className="song-title redacted">traffic</div>
@@ -37,13 +48,6 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                         <div className="song-title" onClick={()=>locateElement('rust')}>rust</div>
                         <div className="song-title redacted">orca</div>
                     </div>
-                </div>
-
-                <div className="terminal-about" id="terminal-about">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Quibusdam, at. Optio, temporibus? Eveniet repudiandae maxime saepe 
-                    deleniti. Eligendi, voluptatem aliquid blanditiis provident 
-                    molestiae autem ipsum id, veritatis doloremque ullam eveniet?
                 </div>
 
                 <div className="lyrics lyrics-redacted" id="traffic">
