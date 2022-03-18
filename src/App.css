@@ -23,7 +23,7 @@ html, body, #root, .main {
 
 /* RUST MAIN */
 
-.rust-main {
+.main-container {
     height: 100%;
     width: 100%;
     position: relative;
@@ -43,6 +43,38 @@ html, body, #root, .main {
     right: 0;
     top: 50%;
     bottom: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+    box-shadow: -2px 2px 3px 1px rgb(0 0 0 / 30%);
+    background: darkred;
+
+    font-family: prompt;
+}
+
+.dogbite-main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    background-image: url('./art/rain.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    user-select: none;
+    overflow: hidden;
+}
+
+.dogbite-nav {
+    position: absolute;
+    bottom: 0;
+    right: calc(50% + 224.55px);
+    left: calc(50% - 224.55px);
 
     display: flex;
     align-items: center;
@@ -99,8 +131,9 @@ html, body, #root, .main {
 
 .popup-content {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    bottom: 200px;
+    left: calc(50% - 200px);
+    right: calc(50% + 200px);
 
     height: 400px;
     width: 400px;
@@ -236,10 +269,13 @@ html, body, #root, .main {
 }
 
 .cohort-b {
-    position: relative;
-    top: .5rem;
-    left: 1rem;
+    position: absolute;
+    bottom: 160px;
+    left: calc(50% - 41.655px);
+    right: calc(50% + 41.655px);
     font-family: prompt;
+    color: var(--border-color);
+    width: fit-content;
 }
 
 /* IPHONE X */
@@ -251,7 +287,7 @@ html, body, #root, .main {
         display: none;
     }
 
-    .rust-main {
+    .main-container {
         background-position-x: 0;
         background-position-y: 110%;
         background-size: 500px;
