@@ -303,10 +303,9 @@ html, body, #root, .main {
         align-items: center;
     }
 
-    /* .dogbite-main {
-        background-image: url('./art/mobile_dog.png'); */
-
-    /* } */
+    .dogbite-main {
+        height: 100%;
+    }
     
     .rust-nav {
         bottom: 0;
