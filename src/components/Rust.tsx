@@ -1,18 +1,13 @@
 import { Routes, Route, NavLink } from "react-router-dom";
-import { MouseEventHandler, useState } from "react";
+import { useState } from "react";
 import { PhotoPopup } from "./popups/PhotoPopup";
 import { InfoPopup } from "./popups/InfoPopup";
 import { SoundPopup } from "./popups/SoundPopup";
 import TerminalPopup from "./popups/TerminalPopup";
 
-interface navProps {
-    bandTag: String;
-    setBandTag: Function;
-}
 
-function NavBar({bandTag, setBandTag}:navProps) {
+function NavBar() {
     
-
     return (
         <nav className="dogbite-nav">
             <NavLink to="/" className="cb">cb.</NavLink>
@@ -25,16 +20,15 @@ function NavBar({bandTag, setBandTag}:navProps) {
 
 export default function Rust() {
     let [isTerminal, setIsTerminal] = useState(false);
-    let [bandTag, setBandTag] = useState('');
 
     return (
         <div className="dogbite-main">
-            <div className={`cohort-b ${bandTag}`}>COHORT B</div>
+            <div className='cohort-b'>COHORT B</div>
             <div className="cb-container">
                 <div className="cb-mobile">cb.</div>
             </div>
             <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
-            <NavBar bandTag={bandTag} setBandTag={setBandTag}/>
+            <NavBar/>
             <Routes>
                 <Route path="sound" element={<SoundPopup />} />
                 <Route path="photos" element={<PhotoPopup />} />
