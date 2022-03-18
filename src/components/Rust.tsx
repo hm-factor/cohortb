@@ -30,7 +30,9 @@ export default function Rust() {
     return (
         <div className="dogbite-main">
             <div className={`cohort-b ${bandTag}`}>COHORT B</div>
-            <div className="cb-mobile">cb.</div>
+            <div className="cb-container">
+                <div className="cb-mobile">cb.</div>
+            </div>
             <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
             <NavBar bandTag={bandTag} setBandTag={setBandTag}/>
             <Routes>

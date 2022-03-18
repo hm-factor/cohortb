@@ -274,7 +274,7 @@ html, body, #root, .main {
     left: calc(50% - 41.655px);
     right: calc(50% + 41.655px);
     font-family: prompt;
-    color: var(--border-color);
+    color: white;
     width: fit-content;
 }
 
@@ -299,6 +299,11 @@ html, body, #root, .main {
         align-items: center;
     }
 
+    /* .dogbite-main {
+        background-image: url('./art/mobile_dog.png'); */
+
+    /* } */
+    
     .rust-nav {
         bottom: 0;
         top: unset;
@@ -321,17 +326,31 @@ html, body, #root, .main {
     .cb {
         display: none;
     }
+    .cb-container {
+        display: flex;
+        height: 4rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, black, transparent);
+    }
     .cb-mobile {
         display: flex;
         position: absolute;
-        top: 0;
+        align-items: center;
         width: 3rem;
         height: 3rem;
+
+        /* DOGBITE */
+        background-color: transparent;
+        border: 2px solid rgb(176 141 141);
+        color: rgb(176 141 141);
+        font-weight: 500;
     }
 
     .popup-content {
         /* position: unset; */
-        top: 5rem;
+        top: 10rem;
         right: unset;
         height: 400px;
         width: 400px;
