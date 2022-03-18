@@ -143,8 +143,8 @@ html, body, #root, .main {
     align-items: center;
 
     font-family: prompt;
-    background-color: rgba(255, 255, 255, .7);
-
+    background-color: rgba(255, 255, 255, .2);
+    
     overflow: hidden;
 }
 
@@ -155,7 +155,7 @@ html, body, #root, .main {
 }
 .popup-links a, .popup-links p {
     text-decoration: none;
-    color: black;
+    color: rgb(176 141 141);
     font-size: 2rem;
     line-height: 2rem;
     margin: 0;
@@ -308,6 +308,15 @@ html, body, #root, .main {
 
         padding: 1rem 0;
     }
+    .dogbite-nav {
+        bottom: 0;
+        right: unset;
+        left: unset;
+        width: 100%;
+        padding: unset;
+
+        padding: 1rem 0;
+    }
 
     .cb {
         display: none;
@@ -332,7 +341,8 @@ html, body, #root, .main {
         align-items: center;
 
         font-family: prompt;
-        background-color: rgba(255, 255, 255, .7);
+        color: var(--backdrop-color);
+        background-color: rgba(54, 54, 54, 0.7);
     }
 
     .terminal-popup {
