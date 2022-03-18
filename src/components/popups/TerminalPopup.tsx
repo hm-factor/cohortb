@@ -43,7 +43,7 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     <div className="terminal-tag lyrics-tags">
                         <h3>lyrics</h3>
                         <div className="song-title redacted">traffic</div>
-                        <div className="song-title redacted">dogbite</div>
+                        <div className="song-title" onClick={()=>locateElement('dogbite')}>dogbite</div>
                         <div className="song-title redacted">purse</div>
                         <div className="song-title" onClick={()=>locateElement('rust')}>rust</div>
                         <div className="song-title redacted">orca</div>
@@ -52,17 +52,29 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
 
                 <div className="lyrics lyrics-redacted" id="traffic">
                     Has it kicked in?
-                    All of his tendon 
-                    All of his skin
-                    With matters so urgent
-                    Have you seen where his face went?
-                    Oh im aware
-                    Yes Ive been aware
 
-                    This movement to the next
-                    Has gotten me in a bind
-                    with death in its playground 
-                    But its so clear to me now
+                    <div className="unused-lyrics">
+                        All of his tendon 
+                        All of his skin
+                        With matters so urgent
+                        Have you seen where his face went?
+                        Oh im aware
+                        Yes Ive been aware
+
+                        This movement to the next
+                        Has gotten me in a bind
+                        with death in its playground 
+                        But its so clear to me now
+                    </div>
+
+                    a man sinks into his seat
+                    oh how good he couldve had it
+                    if he just hadnt
+                    drowned his frustrations in a sea of red lights
+                    breeding frustration anew
+                    "what am i doing?"
+                    "where am i going?"
+
                     And he says to himself
 
                     and Ive been known to use
@@ -80,7 +92,7 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     Have I seen enough?
                 </div>
 
-                <div className="lyrics lyrics-redacted" id="dogbite">
+                <div className="lyrics" id="dogbite">
                     Aint no one wholl let you know when youre hanging loose
                     But theyll tell you that its for a cause
                     And when your efforts dont cut it 
