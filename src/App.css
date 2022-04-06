@@ -284,10 +284,40 @@ html, body, #root, .main {
 
 .announcement-container {
     position: absolute;
-    display: flex;
+    left: calc(50% - 10rem);
+    right: calc(50% + 10rem);
+    top: 4rem;
+
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+
+    width: 20rem;
+    height: 40rem;
+
+    background: black;
+    color: var(--lavender);
+}
+
+.announcement-nav {
+    width: 100%;
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.announcement-nav-element {
+    padding: 1rem;
+    width: 50%;
+    text-align: center;
+}
+.announcement-nav-element:hover {
+    background: var(--backdrop-color);
+}
+.nav-selected {
+    background: var(--alt-background);
 }
 
 /* IPHONE X */

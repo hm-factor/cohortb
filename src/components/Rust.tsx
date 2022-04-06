@@ -4,6 +4,7 @@ import { PhotoPopup } from "./popups/PhotoPopup";
 import { InfoPopup } from "./popups/InfoPopup";
 import { SoundPopup } from "./popups/SoundPopup";
 import TerminalPopup from "./popups/TerminalPopup";
+import Announcements from "./popups/Announcements";
 
 
 function NavBar() {
@@ -24,6 +25,7 @@ export default function Rust() {
     return (
         <div className="dogbite-main">
             <div className='cohort-b'>COHORT B</div>
+            <Announcements/>
             <div className="cb-container">
                 <div className="cb-mobile">cb.</div>
             </div>
