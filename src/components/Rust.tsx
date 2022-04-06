@@ -4,7 +4,7 @@ import { PhotoPopup } from "./popups/PhotoPopup";
 import { InfoPopup } from "./popups/InfoPopup";
 import { SoundPopup } from "./popups/SoundPopup";
 import TerminalPopup from "./popups/TerminalPopup";
-import Announcements from "./popups/Announcements";
+import Announcements from "./Announcements/Announcements";
 
 
 function NavBar() {
