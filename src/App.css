@@ -9,7 +9,8 @@ html, body, #root, .main {
 
 :root {
     --almost-white: rgb(230,217,185);
-    --backdrop-color: rgb(31,61,12);
+    --almost-black: rgb(28, 28, 28);
+    --forest-green: rgb(31,61,12);
     --darker-green: rgb(1,40,1);
     --pumpkin: rgb(160, 82, 45);
     --mustard: rgb(151,120,25);
@@ -316,6 +317,8 @@ html, body, #root, .main {
 
     background: black;
     color: var(--lavender);
+    box-shadow: -20px 15px 5px var(--almost-white), 
+        20px -15px 5px var(--mustard);
 
     overflow-y: hidden;
 }
@@ -334,13 +337,14 @@ html, body, #root, .main {
     padding: 1rem;
     width: 50%;
     text-align: center;
+    border: 1px solid transparent;
 }
 .announcement-nav-element:hover {
-    background: var(--mustard);
+    border: 1px solid var(--mustard);
     cursor: pointer;
 }
 .nav-selected {
-    background: var(--mustard);
+    background: var(--forest-green);
 }
 
 .announcement-content {
@@ -350,7 +354,7 @@ html, body, #root, .main {
     justify-content: center;
 }
 
-.show-content {
+.show-content, .release-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -359,17 +363,19 @@ html, body, #root, .main {
     padding: 1rem 0;
     position: relative;
 }
-.show-info {
+.show-info, .release-info {
     width: 70%;
     margin: 1rem 0;
     border: 1px solid var(--almost-white);
     padding: 1rem;
+    color: var(--almost-white);
 }
 .show-info:nth-child(even) {
     border: 1px solid var(--darker-green);
 }
-.show-info:hover {
-    background: yellow;
+.show-info:hover, .release-info:hover {
+    background: var(--mustard);
+    color: var(--almost-black);
     cursor: pointer;
 }
 
@@ -472,7 +478,7 @@ html, body, #root, .main {
         align-items: center;
 
         font-family: prompt;
-        color: var(--backdrop-color);
+        color: var(--forest-green);
         background-color: rgba(54, 54, 54, 0.7);
     }
 
