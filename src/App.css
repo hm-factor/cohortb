@@ -4,15 +4,20 @@ html, body, #root, .main {
     height: 100vh;
     width: 100vw;
     margin: 0px;
+    font-family: prompt;
 }
 
 :root {
-    --border-color: rgb(230,217,185);
+    --almost-white: rgb(230,217,185);
     --backdrop-color: rgb(31,61,12);
     --darker-green: rgb(1,40,1);
-    --text-color: rgb(160, 82, 45);
-    --alt-background: rgb(151,120,25);
+    --pumpkin: rgb(160, 82, 45);
+    --mustard: rgb(151,120,25);
     --lavender: rgb(90,84,121);
+    --btn-grey: rgb(36, 35, 35);
+
+    --announcement-height: 40rem;
+    --footer-height: 2.5rem;
 }
 
 .main {
@@ -282,6 +287,19 @@ html, body, #root, .main {
     width: fit-content;
 }
 
+.announcement-open {
+    position: absolute;
+    left: calc(50% - 5rem);
+    right: calc(50% + 5rem);
+    top: 4rem;
+    
+    width: 10rem;
+    background: var(--mustard);
+    
+    text-align: center;
+    cursor: pointer;
+}
+
 .announcement-container {
     position: absolute;
     left: calc(50% - 10rem);
@@ -294,7 +312,7 @@ html, body, #root, .main {
     align-items: center; */
 
     width: 20rem;
-    height: 40rem;
+    height: var(--announcement-height);
 
     background: black;
     color: var(--lavender);
@@ -318,14 +336,15 @@ html, body, #root, .main {
     text-align: center;
 }
 .announcement-nav-element:hover {
-    background: var(--backdrop-color);
+    background: var(--mustard);
+    cursor: pointer;
 }
 .nav-selected {
-    background: var(--alt-background);
+    background: var(--mustard);
 }
 
 .announcement-content {
-    height: 100%;
+    max-height: calc(var(--announcement-height) - var(--footer-height) - 56.5px);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -338,11 +357,12 @@ html, body, #root, .main {
     width: 100%;
     overflow-y: scroll;
     padding: 1rem 0;
+    position: relative;
 }
 .show-info {
     width: 70%;
     margin: 1rem 0;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--almost-white);
     padding: 1rem;
 }
 .show-info:nth-child(even) {
@@ -350,6 +370,25 @@ html, body, #root, .main {
 }
 .show-info:hover {
     background: yellow;
+    cursor: pointer;
+}
+
+.announcement-footer {
+    width: 100%;
+    height: var(--footer-height);
+    background: var(--btn-grey);
+
+    color: var(--almost-white);
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.announcement-footer:hover {
+    background: darkred;
+    cursor: pointer;
 }
 
 /* IPHONE X */
@@ -453,22 +492,22 @@ html, body, #root, .main {
     display: none;
 }
 
+/* SCROLLBAR */
+
 ::-webkit-scrollbar {
     width: 10px;
+    position: absolute;
+    right: 0;
+
+    display: none;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgb(255,255,255,.4); 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: rgb(37, 37, 37);
-    border-radius: 5px; 
+    background: transparent; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: darkred; 
+    background: var(--almost-white);
 }
