@@ -454,9 +454,6 @@ html, body, #root, .main {
         padding: 1rem 0;
     }
 
-    .cb {
-        /* display: none; */
-    }
     .cb-container {
         display: flex;
         height: 4rem;
