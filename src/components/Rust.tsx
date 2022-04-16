@@ -1,5 +1,5 @@
-import { Routes, Route, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { Routes, Route, NavLink, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { PhotoPopup } from "./popups/PhotoPopup";
 import { InfoPopup } from "./popups/InfoPopup";
 import { SoundPopup } from "./popups/SoundPopup";
@@ -8,10 +8,11 @@ import Announcements from "./Announcements/Announcements";
 
 
 function NavBar() {
+    let location = useLocation();
     
     return (
         <nav className="dogbite-nav">
-            <NavLink to="/" className="cb">cb.</NavLink>
+            <NavLink to="/" className="cb">{location.pathname === '/' ? 'cb.' : 'x'}</NavLink>
             <NavLink to="/sound" className="nav-element">sound</NavLink>
             <NavLink to="/photos" className="nav-element">photo</NavLink>
             <NavLink to="/info" className="nav-element">info</NavLink>
