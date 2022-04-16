@@ -19,6 +19,7 @@ html, body, #root, .main {
 
     --announcement-height: 40rem;
     --footer-height: 2.5rem;
+    --mobile-announcement-height: calc(100vh - 4rem - 120.5px);
 }
 
 .main {
@@ -503,6 +504,11 @@ html, body, #root, .main {
 
         width: 98%;
         height: 70%;
+    }
+
+    .announcement-container {
+        height: var(--mobile-announcement-height);
+        box-shadow: unset;
     }
 }
 
