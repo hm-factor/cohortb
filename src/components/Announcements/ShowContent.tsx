@@ -1,11 +1,12 @@
 export default function ShowContent() {
+    
+    // place, date, link
     let showInfo = [
-        // place, date, link
         ['Arlenes Grocery', 'Sunday, April 17th', 'https://www.arlenesgrocerynyc.com/events/aux-blood-cohort-b-the-variants-appalling-use/'],
-        ['Baby\'s All Right', 'Tuesday May 10th', ''],
-        ['Purgatory', 'Sunday June 19th', ''],
-        ['Trans Pecos', 'Sunday July 3rd', ''],
-        ['Mercury Lounge', 'Sunday July 17th', ''],
+        // ['Baby\'s All Right', 'Tuesday May 10th', ''],
+        // ['Purgatory', 'Sunday June 19th', ''],
+        // ['Trans Pecos', 'Sunday July 3rd', ''],
+        // ['Mercury Lounge', 'Sunday July 17th', ''],
     ]
 
     function openLink(link:string) {

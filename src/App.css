@@ -295,10 +295,18 @@ html, body, #root, .main {
     top: 4rem;
     
     width: 10rem;
-    background: var(--mustard);
+    background: var(--lavender);
+    color: var(--almost-white);
+    border-radius: 2px;
     
     text-align: center;
     cursor: pointer;
+
+    box-shadow: -5px 5px 5px rgb(0 0 0 / 70%);
+}
+.announcement-open:hover {
+    box-shadow: -2px 2px 5px var(--almost-white),
+        2px -2px 5px var(--mustard);
 }
 
 .announcement-container {
@@ -317,8 +325,7 @@ html, body, #root, .main {
 
     background: black;
     color: var(--lavender);
-    box-shadow: -20px 15px 5px var(--almost-white), 
-        20px -15px 5px var(--mustard);
+    box-shadow: -5px 5px 5px rgb(0 0 0 / 70%);
 
     overflow-y: hidden;
 }
@@ -348,8 +355,9 @@ html, body, #root, .main {
 }
 
 .announcement-content {
-    max-height: calc(var(--announcement-height) - var(--footer-height) - 56.5px);
+    height: 100%;
     width: 100%;
+    max-height: calc(var(--announcement-height) - var(--footer-height) - 56.5px);
     display: flex;
     justify-content: center;
 }
@@ -377,6 +385,10 @@ html, body, #root, .main {
     background: var(--mustard);
     color: var(--almost-black);
     cursor: pointer;
+}
+.release-info:hover .release-content {
+    background-image: url(./art/trees.JPG);
+    background-position: center;
 }
 
 .announcement-footer {
