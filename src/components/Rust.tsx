@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { PhotoPopup } from "./popups/PhotoPopup";
 import { InfoPopup } from "./popups/InfoPopup";
 import { SoundPopup } from "./popups/SoundPopup";
