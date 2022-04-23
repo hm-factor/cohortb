@@ -13,6 +13,7 @@ export function InfoPopup({isTerminal, setIsTerminal}:terminalPopupProps) {
             <div className={"popup-links shows"}>
                 <a href="https://linktr.ee/cohortb" target="_blank" rel="noreferrer">linktree</a>
                 <a href="https://www.instagram.com/cohortbbb/" target="_blank" rel="noreferrer">instagram</a>
+                <a href="https://twitter.com/COHORTB_nyc" target="_blank" rel="noreferrer">twitter</a>
                 <p onClick={openTerminal}>terminal</p>
             </div>
         </div>
