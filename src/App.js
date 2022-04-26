@@ -1,14 +1,13 @@
 import './App.css';
 // import HomePage from './components/HomePage.tsx';
-import Rust from './components/Rust';
+import Landing from './components/Landing';
 
 
 function App() {
 
   return (
     <div className="main">
-      {/* <HomePage/> */}
-      <Rust />
+      <Landing />
     </div>
   );
 }

@@ -96,6 +96,51 @@ html, body, #root, .main {
     font-family: prompt;
 }
 
+/* 1001 LUKEWARM USA */
+
+.background-container {
+    height: 100%;
+    width: 100%;
+
+    background: linear-gradient(rgb(141, 118, 41),
+        rgb(41, 117, 74), rgb(187, 186, 140));
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+    height: 100vh;
+}
+
+.LWU-main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    background-color: transparent;
+
+    background-image: url(./art/noise_background_small.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    user-select: none;
+    overflow: hidden;
+}
+
+.LWU-nav {
+    position: absolute;
+    bottom: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    width: 100%;
+    height: fit-content;
+    padding: 2rem;
+    box-shadow: -2px 2px 3px 1px rgb(0 0 0 / 30%);
+    background: transparent;
+    
+    font-family: prompt;
+}
+
 .nav-element {
     text-decoration: none;
     margin: 1rem;
@@ -531,4 +576,18 @@ html, body, #root, .main {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--almost-white);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
