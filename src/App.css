@@ -20,6 +20,8 @@ html, body, #root, .main {
     --announcement-height: 40rem;
     --footer-height: 2.5rem;
     --mobile-announcement-height: calc(100vh - 4rem - 120.5px);
+
+    --polaroid-width: calc(.35 * 50vh);
 }
 
 .main {
@@ -102,11 +104,10 @@ html, body, #root, .main {
     height: 100%;
     width: 100%;
 
-    background: linear-gradient(rgb(141, 118, 41),
-        rgb(41, 117, 74), rgb(187, 186, 140));
+    /* background: rgb(19, 84, 79);
     background-size: 300% 300%;
     animation: gradient 10s ease infinite;
-    height: 100vh;
+    height: 100vh; */
 }
 
 .LWU-main {
@@ -116,9 +117,9 @@ html, body, #root, .main {
 
     background-color: transparent;
 
-    background-image: url(./art/noise_background_small.png);
+    /* background-image: url(./art/noise2.png);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     
     user-select: none;
     overflow: hidden;
@@ -130,15 +131,37 @@ html, body, #root, .main {
     
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     
-    width: 100%;
+    width: calc(100% - 4rem);
     height: fit-content;
     padding: 2rem;
-    box-shadow: -2px 2px 3px 1px rgb(0 0 0 / 30%);
     background: transparent;
     
     font-family: prompt;
+}
+
+.polaroid {
+    position: absolute;
+    left: calc(50% - var(--polaroid-width));
+    right: calc(50% + var(--polaroid-width));
+    top: 15%;
+
+    height: 50%;
+    width: auto;
+
+    box-shadow: -2px 2px 3px 1px rgb(0 0 0 / 30%);
+}
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+
 }
 
 .nav-element {

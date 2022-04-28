@@ -9,15 +9,15 @@ export default function Announcements() {
     function closeAnnouncements() {
         setExit(true);
     }
-    function openAnnouncements() {
-        setExit(false);
-    }
+    // function openAnnouncements() {
+    //     setExit(false);
+    // }
 
     return (
         <>
-            <nav className={`announcement-open ${exit ? '' : 'off'}`} onClick={openAnnouncements}>
+            {/* <nav className={`announcement-open ${exit ? '' : 'off'}`} onClick={openAnnouncements}>
                 announcements
-            </nav>
+            </nav> */}
             <div className={`announcement-container ${exit ? 'off' : ''}`}>
                 <nav className="announcement-nav">
                     <div 
