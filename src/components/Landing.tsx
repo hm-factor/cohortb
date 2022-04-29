@@ -41,9 +41,6 @@ export default function Landing() {
             </div>
             <div className="LWU-main">
                 <img src={polaroid} alt="polaroid" className="polaroid"/>
-                <div className="cb-container">
-                    <div className="cb-mobile">cb.</div>
-                </div>
                 <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
                 <NavBar/>
                 <Routes>
