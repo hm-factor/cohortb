@@ -9,6 +9,7 @@ import Announcements from "./Announcements/Announcements";
 import polaroid from '../art/ep_polaroid.png';
 import cohort_logo from '../art/cohort_logo.PNG';
 
+import { AppBar, Button, Menu, MenuItem, Box } from "@mui/material";
 
 function NavBar() {
     
@@ -27,6 +28,79 @@ function NavBar() {
     )
 }
 
+function MobileNavBar() {
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    return (
+        <AppBar 
+            position="fixed" 
+            sx={{ 
+                top: 'auto', 
+                bottom: 0, 
+                backgroundColor: "rgb(28, 28, 28)",
+                // display: 'flex',
+                // flexDirection: 'row',
+                // justifyContent: 'space-around',
+            }}
+        >
+            <Button
+                id="basic-button"
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleClick}
+                color="secondary"
+            >
+                menu
+            </Button>
+            <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                }}
+            >
+
+                {/* <MenuItem onClick={handleClose}>
+                     <NavLink to="/sound" className="nav-element">SOUND</NavLink>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                     <NavLink to="/announcements" className="nav-element">ANNOUNCEMENTS</NavLink>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                     <NavLink to="/photos" className="nav-element">PHOTOS</NavLink>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                     <NavLink to="/info" className="nav-element">INFO</NavLink>
+                </MenuItem> */}
+                <MenuItem>
+                    <Box
+                        sx={{
+                            display: 'grid',
+                            gap: 1,
+                            gridTemplateColumns: 'repeat(2, 1fr)',
+                        }}
+                    >
+                        <NavLink to="/sound" className="nav-element">SOUND</NavLink>
+                        <NavLink to="/announcements" className="nav-element">ANNOUNCEMENTS</NavLink>
+                        <NavLink to="/photos" className="nav-element">PHOTOS</NavLink>
+                        <NavLink to="/info" className="nav-element">INFO</NavLink>
+                    </Box>
+                </MenuItem>
+            </Menu>
+        </AppBar>
+    )
+}
+
 export default function Landing() {
     let [isTerminal, setIsTerminal] = useState(false);
 
@@ -40,7 +114,8 @@ export default function Landing() {
             <div className="LWU-main">
                 <img src={polaroid} alt="polaroid" className="polaroid"/>
                 <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
-                <NavBar/>
+                {/* <NavBar/> */}
+                <MobileNavBar/>
                 <Routes>
                     <Route path="sound" element={<SoundPopup />} />
                     <Route path="announcements" element={<Announcements />} />

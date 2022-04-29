@@ -484,10 +484,6 @@ html, body, #root, .main {
   and (min-device-width: 280px) 
   and (max-device-width: 1024px) { 
 
-    .cohort-b {
-        display: none;
-    }
-
     .main-container {
         background-position-x: 0;
         background-position-y: 110%;
@@ -523,6 +519,10 @@ html, body, #root, .main {
         padding: 1rem 0;
     }
 
+    .nav-element {
+        color: var(--almost-black);
+    }
+
     .cb-container {
         display: flex;
         height: 4rem;
@@ -553,9 +553,6 @@ html, body, #root, .main {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        font-family: prompt;
-        color: var(--forest-green);
     }
 
     .terminal-popup {
