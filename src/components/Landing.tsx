@@ -1,4 +1,4 @@
-import { Routes, Route, NavLink, useLocation } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { PhotoPopup } from "./popups/PhotoPopup";
 import { InfoPopup } from "./popups/InfoPopup";
@@ -13,7 +13,6 @@ import cohort_logo from '../art/cohort_logo.PNG';
 
 
 function NavBar() {
-    // let location = useLocation();
     
     return (
         <nav className="LWU-nav">
