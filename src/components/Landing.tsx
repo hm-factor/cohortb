@@ -6,20 +6,26 @@ import { SoundPopup } from "./popups/SoundPopup";
 import TerminalPopup from "./popups/TerminalPopup";
 import Announcements from "./Announcements/Announcements";
 
-import polaroid from '../art/ep_polaroid.png'
-import vid from '../art/Orca Loop v2.mov'
+import polaroid from '../art/ep_polaroid.png';
+import cohort_logo from '../art/cohort_logo.PNG';
+
+// import ReactPlayer from "react-player";
 
 
 function NavBar() {
-    let location = useLocation();
+    // let location = useLocation();
     
     return (
         <nav className="LWU-nav">
-            <NavLink to="/" className="cb">{location.pathname === '/' ? 'cb.' : 'x'}</NavLink>
-            <NavLink to="/sound" className="nav-element">SOUND</NavLink>
-            <NavLink to="/announcements" className="nav-element">ANNOUNCEMENTS</NavLink>
-            <NavLink to="/photos" className="nav-element">PHOTO</NavLink>
-            <NavLink to="/info" className="nav-element">INFO</NavLink>
+            <NavLink to="/" className="cohort-logo">
+                <img src={cohort_logo} alt="cohort-logo" />    
+            </NavLink>
+            <div className="LWU-nav-elements">
+                <NavLink to="/sound" className="nav-element">SOUND</NavLink>
+                <NavLink to="/announcements" className="nav-element">ANNOUNCEMENTS</NavLink>
+                <NavLink to="/photos" className="nav-element">PHOTO</NavLink>
+                <NavLink to="/info" className="nav-element">INFO</NavLink>
+            </div>
         </nav>
     )
 }
@@ -29,11 +35,13 @@ export default function Landing() {
 
     return (
         <div className="background-container">
-            <video muted loop id="video" source={vid}/>
+            <div className="react-player-wrapper">
+                <video autoPlay loop muted className="react-player" >
+                    <source src='/videos/orca_loop.mp4' type="video/mp4"/>
+                </video>
+            </div>
             <div className="LWU-main">
-                {/* <div className='cohort-b'>COHORT B</div> */}
                 <img src={polaroid} alt="polaroid" className="polaroid"/>
-                {/* <Announcements/> */}
                 <div className="cb-container">
                     <div className="cb-mobile">cb.</div>
                 </div>
