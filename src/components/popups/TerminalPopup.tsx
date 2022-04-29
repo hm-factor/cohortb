@@ -30,27 +30,27 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                         <h3 className="about-bio">about</h3>
                     </div>
                     <div className="terminal-about" id="terminal-about">
-                        Formed in January 2020, Cohort B is an avant-punk outfit 
+                        Formed in January 2020, Cohort B is an experimental-punk outfit 
                         born out of Queens, New York. While members Hunter Factor, 
                         Jhonny Núñez, and Don Pardo all share a similar, yet 
                         eclectic taste of musical influences, their sound is 
-                        reminiscent of the sickening rhythms of 80's no-wave 
-                        mixed with fierce hardcore aggression, by way of prog-rock 
+                        reminiscent of the twisted rhythms of 80's no-wave 
+                        mixed with modern, hardcore aggression, by way of prog-rock 
                         style songwriting execution. The goal is to corral their 
-                        followers along in the process, leaving them asking 
-                        questions like "what the fuck is that sound?"
+                        listeners along in the process, leaving them asking 
+                        "what the fuck?..."
                     </div>
                     <div className="terminal-tag lyrics-tags">
                         <h3>lyrics</h3>
-                        <div className="song-title redacted">traffic</div>
+                        <div className="song-title" onClick={()=>locateElement('traffic')}>traffic</div>
                         <div className="song-title" onClick={()=>locateElement('dogbite')}>dogbite</div>
-                        <div className="song-title redacted">purse</div>
+                        <div className="song-title" onClick={()=>locateElement('purse')}>purse</div>
                         <div className="song-title" onClick={()=>locateElement('rust')}>rust</div>
-                        <div className="song-title redacted">orca</div>
+                        <div className="song-title" onClick={()=>locateElement('orca')}>orca</div>
                     </div>
                 </div>
 
-                <div className="lyrics lyrics-redacted" id="traffic">
+                <div className="lyrics" id="traffic">
                     Has it kicked in?
 
                     <div className="unused-lyrics">
@@ -142,7 +142,7 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     Whyd you give up on me
                     Why wont you give me —
                 </div>
-                <div className="lyrics lyrics-redacted" id="purse">
+                <div className="lyrics" id="purse">
                     If i could be just a bit stronger,
                     would I even be an option?
                     if i could grow an inch or two,
@@ -232,7 +232,7 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     if i could be frank 
                     no one knows what this man was like
                 </div>
-                <div className="lyrics lyrics-redacted" id="orca">
+                <div className="lyrics" id="orca">
                     shes got his hand pressed against his breast
                     connection; a subtle form of arrest 
                     at least thats the impression that he gets
