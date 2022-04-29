@@ -9,8 +9,6 @@ import Announcements from "./Announcements/Announcements";
 import polaroid from '../art/ep_polaroid.png';
 import cohort_logo from '../art/cohort_logo.PNG';
 
-// import ReactPlayer from "react-player";
-
 
 function NavBar() {
     
