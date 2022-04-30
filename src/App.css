@@ -473,6 +473,14 @@ html, body, #root, .main {
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+    .mobile-banner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 /* IPHONE X */
 @media only screen 
   and (min-device-width: 280px) 
@@ -574,8 +582,8 @@ html, body, #root, .main {
 
     .cohort-logo-mobile {
         top: 0;
-        display: flex;
         width: 100%;
+        display: flex;
         justify-content: center;
     }
 

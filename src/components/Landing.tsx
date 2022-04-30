@@ -78,7 +78,7 @@ export default function Landing() {
         height: window.innerHeight,
         width: window.innerWidth
     })
-    const [mobile, setMobile] = useState<boolean>(dimensions.width <= 900)
+    const [mobile, setMobile] = useState<boolean>(dimensions.width <= 1024)
 
     useEffect(() => {
         function handleResize() {
@@ -101,9 +101,11 @@ export default function Landing() {
             </div>
             <div className="LWU-main">
                 {mobile && (
-                    <NavLink to="/" className="cohort-logo-mobile">
-                        <img src={cohort_logo} alt="cohort-logo" />    
-                    </NavLink>
+                    <div className="mobile-banner">
+                        <NavLink to="/" className="cohort-logo-mobile">
+                            <img src={cohort_logo} alt="cohort-logo" />    
+                        </NavLink>
+                    </div>
                 )}
                 <img src={polaroid} alt="polaroid" className="polaroid"/>
                 <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
