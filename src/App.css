@@ -520,7 +520,15 @@ html, body, #root, .main {
     }
 
     .nav-element {
+        display: flex;
+        justify-content: center;
         color: var(--almost-black);
+        font-family: prompt;
+
+    }
+    .nav-element.active {
+        background-color: transparent;
+        border: 1px solid rgb(65, 65, 65);
     }
 
     .cb-container {
@@ -569,6 +577,17 @@ html, body, #root, .main {
     .announcement-container {
         height: var(--mobile-announcement-height);
         box-shadow: unset;
+    }
+
+    .cohort-logo-mobile {
+        top: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .polaroid {
+        top: 20%;
     }
 }
 

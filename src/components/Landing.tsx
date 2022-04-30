@@ -1,5 +1,5 @@
 import { Routes, Route, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PhotoPopup } from "./popups/PhotoPopup";
 import { InfoPopup } from "./popups/InfoPopup";
 import { SoundPopup } from "./popups/SoundPopup";
@@ -9,7 +9,11 @@ import Announcements from "./Announcements/Announcements";
 import polaroid from '../art/ep_polaroid.png';
 import cohort_logo from '../art/cohort_logo.PNG';
 
-import { AppBar, Button, Menu, MenuItem, Box } from "@mui/material";
+import { AppBar, Box} from "@mui/material";
+import camera from "../icons/camera.png"
+import ear from "../icons/ear.png"
+import shows from "../icons/show.png"
+import info from "../icons/info.png"
 
 function NavBar() {
     
@@ -29,14 +33,13 @@ function NavBar() {
 }
 
 function MobileNavBar() {
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+
+    const NavLinkInfo = [
+        {link:"/sound", btnIcon:ear},
+        {link:"/announcements", btnIcon:shows},
+        {link:"/photos", btnIcon:camera},
+        {link:"/info", btnIcon:info},
+    ]
 
     return (
         <AppBar 
@@ -45,64 +48,49 @@ function MobileNavBar() {
                 top: 'auto', 
                 bottom: 0, 
                 backgroundColor: "rgb(28, 28, 28)",
-                // display: 'flex',
-                // flexDirection: 'row',
-                // justifyContent: 'space-around',
             }}
         >
-            <Button
-                id="basic-button"
-                aria-controls={open ? 'basic-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleClick}
-                color="secondary"
-            >
-                menu
-            </Button>
-            <Menu
-                id="basic-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                MenuListProps={{
-                    'aria-labelledby': 'basic-button',
+            <Box
+                sx={{
+                    display:"flex",
+                    flexDirection:"row",
+                    justifyContent:"space-evenly",
+                    backgroundColor:"rgb(236, 224, 192)"
                 }}
             >
+                {NavLinkInfo.map((NavLinkItem) => {
+                    let {link, btnIcon} = NavLinkItem;
 
-                {/* <MenuItem onClick={handleClose}>
-                     <NavLink to="/sound" className="nav-element">SOUND</NavLink>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                     <NavLink to="/announcements" className="nav-element">ANNOUNCEMENTS</NavLink>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                     <NavLink to="/photos" className="nav-element">PHOTOS</NavLink>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                     <NavLink to="/info" className="nav-element">INFO</NavLink>
-                </MenuItem> */}
-                <MenuItem>
-                    <Box
-                        sx={{
-                            display: 'grid',
-                            gap: 1,
-                            gridTemplateColumns: 'repeat(2, 1fr)',
-                        }}
-                    >
-                        <NavLink to="/sound" className="nav-element">SOUND</NavLink>
-                        <NavLink to="/announcements" className="nav-element">ANNOUNCEMENTS</NavLink>
-                        <NavLink to="/photos" className="nav-element">PHOTOS</NavLink>
-                        <NavLink to="/info" className="nav-element">INFO</NavLink>
-                    </Box>
-                </MenuItem>
-            </Menu>
+                    return (
+                        <NavLink to={`${link}`} className="nav-element">
+                            <img src={btnIcon} alt="ha" />
+                        </NavLink>
+                    )
+                })}
+            </Box>
         </AppBar>
     )
 }
 
 export default function Landing() {
-    let [isTerminal, setIsTerminal] = useState(false);
+    const [isTerminal, setIsTerminal] = useState<boolean>(false);
+    const [dimensions, setDimensions] = useState({ 
+        height: window.innerHeight,
+        width: window.innerWidth
+    })
+    const [mobile, setMobile] = useState<boolean>(dimensions.width <= 900)
+
+    useEffect(() => {
+        function handleResize() {
+            setDimensions({
+                height: window.innerHeight,
+                width: window.innerWidth
+            })
+        }
+
+        window.addEventListener('resize', handleResize)
+        setMobile(dimensions.width <= 900)
+    }, [dimensions.width])
 
     return (
         <div className="background-container">
@@ -112,10 +100,14 @@ export default function Landing() {
                 </video>
             </div>
             <div className="LWU-main">
+                {mobile && (
+                    <NavLink to="/" className="cohort-logo-mobile">
+                        <img src={cohort_logo} alt="cohort-logo" />    
+                    </NavLink>
+                )}
                 <img src={polaroid} alt="polaroid" className="polaroid"/>
                 <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
-                {/* <NavBar/> */}
-                <MobileNavBar/>
+                {mobile ? <MobileNavBar/> : <NavBar/>}
                 <Routes>
                     <Route path="sound" element={<SoundPopup />} />
                     <Route path="announcements" element={<Announcements />} />
