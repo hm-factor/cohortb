@@ -381,17 +381,11 @@ html, body, #root, .main {
 
 .announcement-container {
     position: absolute;
-    left: calc(50% - 10rem);
-    right: calc(50% + 10rem);
-    top: 4rem;
-
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-
-    width: 20rem;
-    height: var(--announcement-height);
+    left: calc(50% - var(--polaroid-width));
+    right: calc(50% + var(--polaroid-width));
+    top: 15%;
+    height: 50%;
+    width: calc(50vh * .7);
 
     background: black;
     color: var(--lavender);
@@ -575,8 +569,7 @@ html, body, #root, .main {
     }
 
     .announcement-container {
-        height: var(--mobile-announcement-height);
-        box-shadow: unset;
+        top: 20%;
     }
 
     .cohort-logo-mobile {
