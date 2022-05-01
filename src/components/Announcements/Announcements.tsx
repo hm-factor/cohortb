@@ -10,18 +10,16 @@ export default function Announcements() {
             <nav className="announcement-nav">
                 <div 
                     className={`announcement-nav-element ${content==='releases' ? 'nav-selected' : ''}`} 
-                    onClick={()=>setContent('releases')}>Releases</div>
+                    onClick={()=>setContent('releases')}>RELEASES</div>
                 <div 
                     className={`announcement-nav-element ${content==='shows' ? 'nav-selected' : ''}`} 
-                    onClick={()=>setContent('shows')}>Shows</div>
+                    onClick={()=>setContent('shows')}>SHOWS</div>
             </nav>
-            <div className="announcement-content">
-                { content === 'releases' ? (
-                    <ReleaseContent/>
-                ) : (
-                    <ShowContent/>
-                )}
-            </div>
+            { content === 'releases' ? (
+                <ReleaseContent/>
+            ) : (
+                <ShowContent/>
+            )}
         </div>
     )
 }

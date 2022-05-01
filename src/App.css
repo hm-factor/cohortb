@@ -126,6 +126,24 @@ html, body, #root, .main {
 
     box-shadow: -2px 2px 3px 1px rgb(0 0 0 / 30%);
 }
+.polaroid-text {
+    position: absolute;
+    top: calc(66%);
+    width: calc(2 * var(--polaroid-width));
+    left: calc(50% - var(--polaroid-width));
+    text-align: center;
+    color: var(--almost-white);
+
+    font-size: 1.2rem;
+}
+.polaroid-text a {
+    text-decoration: none;
+    color: var(--almost-white);
+}
+.polaroid-text:hover a {
+    text-decoration: underline;
+}
+
 
 .react-player-wrapper {
     width: 100%;
@@ -185,28 +203,6 @@ html, body, #root, .main {
     border-radius: 3px;
 }
 
-.cb, .cb-mobile {
-    background-color: #fff;
-    border: 2px solid black;    
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    color: black;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-
-    font-family: prompt;
-    margin: 1rem;
-    text-decoration: none;
-    cursor: default;
-}
-.cb-mobile {
-    display: none;
-}
-
 .popup-content {
     position: absolute;
     left: calc(50% - var(--polaroid-width));
@@ -259,8 +255,8 @@ html, body, #root, .main {
     font-size: .7rem;
 
     position: absolute;
-    bottom: 3rem;
-    left: 3rem;
+    top: 3rem;
+    right: 3rem;
 
     width: 30rem;
     height: 60%;
@@ -293,7 +289,7 @@ html, body, #root, .main {
     text-align: center;
 }
 .terminal-close:hover {
-    filter: grayscale(.2);
+    background: rgb(175,0,0);
 }
 .terminal-content {
     height: 100%;
@@ -391,7 +387,7 @@ html, body, #root, .main {
     color: var(--lavender);
     box-shadow: -5px 5px 5px rgb(0 0 0 / 70%);
 
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .announcement-nav {
@@ -418,18 +414,17 @@ html, body, #root, .main {
     background: var(--forest-green);
 }
 
-.announcement-content {
-    height: 100%;
+/* .announcement-content {
     width: 100%;
-    max-height: calc(var(--announcement-height) - var(--footer-height) - 56.5px);
     display: flex;
     justify-content: center;
-}
+} */
 
 .show-content, .release-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
     width: 100%;
     overflow-y: scroll;
     padding: 1rem 0;
@@ -454,23 +449,12 @@ html, body, #root, .main {
     background-image: url(./art/trees.JPG);
     background-position: center;
 }
-
-.announcement-footer {
-    width: 100%;
-    height: var(--footer-height);
-    background: var(--btn-grey);
-
-    color: var(--almost-white);
-    position: absolute;
-    bottom: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.noClick {
+    pointer-events: none;
 }
-.announcement-footer:hover {
-    background: darkred;
-    cursor: pointer;
+.noClick:hover {
+    border: 1px solid red;
+    color: red;
 }
 
 @media (max-width: 1024px) {
@@ -589,6 +573,14 @@ html, body, #root, .main {
 
     .polaroid {
         top: 20%;
+    }
+    .polaroid-text {
+        top: 71%;
+    }
+    .polaroid-text a {
+        background: rgb(36, 35, 35, .6);
+        border-radius: 3px;
+        padding: 0 .2rem;
     }
 }
 

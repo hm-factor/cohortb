@@ -2,11 +2,30 @@ export default function ShowContent() {
     
     // place, date, link
     let showInfo = [
-        // ['Arlenes Grocery', 'Sunday, April 17th', 'https://www.arlenesgrocerynyc.com/events/aux-blood-cohort-b-the-variants-appalling-use/'],
-        ['Baby\'s All Right', 'Tuesday May 10th', 'https://www.seetickets.us/event/Cohort-B/479978'],
-        // ['Purgatory', 'Sunday June 19th', ''],
-        // ['Trans Pecos', 'Sunday July 3rd', ''],
-        // ['Mercury Lounge', 'Sunday July 17th', ''],
+        {
+            where:'Baby\'s All Right', 
+            when:'Tuesday May 10th', 
+            how:'https://www.seetickets.us/event/Cohort-B/479978', 
+            active:true
+        },
+        {
+            where:'Purgatory', 
+            when:'Sunday June 19th', 
+            how:'', 
+            active:false
+        },
+        {
+            where:'Trans Pecos', 
+            when:'Sunday July 3rd', 
+            how:'', 
+            active:false
+        },
+        {
+            where:'Mercury Lounge', 
+            when:'Sunday July 17th', 
+            how:'', 
+            active:false
+        },
     ]
 
     function openLink(link:string) {
@@ -16,10 +35,12 @@ export default function ShowContent() {
     return (
         <div className="show-content">
             {showInfo.map( (info) => {
+                const {where, when, how, active} = info;
+                
                 return (
-                    <div className="show-info" onClick={()=>openLink(info[2])}>
-                        <div>{info[0]}</div>
-                        <div>{info[1]}</div>
+                    <div className={`show-info ${active ? '' : 'noClick'}`} onClick={()=>openLink(how)}>
+                        <div>{where}</div>
+                        <div>{when}</div>
                     </div>
                 )
             })}

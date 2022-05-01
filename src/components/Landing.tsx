@@ -77,8 +77,8 @@ export default function Landing() {
     const [dimensions, setDimensions] = useState({ 
         height: window.innerHeight,
         width: window.innerWidth
-    })
-    const [mobile, setMobile] = useState<boolean>(dimensions.width <= 1024)
+    });
+    const [mobile, setMobile] = useState<boolean>(dimensions.width <= 1024);
 
     useEffect(() => {
         function handleResize() {
@@ -90,7 +90,7 @@ export default function Landing() {
 
         window.addEventListener('resize', handleResize)
         setMobile(dimensions.width <= 900)
-    }, [dimensions.width])
+    }, [dimensions.width]);
 
     return (
         <div className="background-container">
@@ -108,6 +108,13 @@ export default function Landing() {
                     </div>
                 )}
                 <img src={polaroid} alt="polaroid" className="polaroid"/>
+                <div className="polaroid-text">
+                    <a 
+                        href="https://open.spotify.com/artist/1rnMxenrTZyuttAhlEC5H2?si=KuW3G7RUR-C4xo5iZ4jTlw" 
+                        rel="noreferrer" 
+                        target="_blank"
+                    >1001 LUKEWARM USA</a> OUT NOW 
+                </div>
                 <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
                 {mobile ? <MobileNavBar/> : <NavBar/>}
                 <Routes>
