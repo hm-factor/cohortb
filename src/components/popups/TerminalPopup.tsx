@@ -1,5 +1,3 @@
-// import { useState } from "react";
-
 interface terminalPopupProps {
     isTerminal: Boolean;
     setIsTerminal: Function;
@@ -27,7 +25,7 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
             <div className="terminal-content">
                 <div className="terminal-tags">
                     <div className="terminal-tag about">
-                        <h3 className="about-bio">about</h3>
+                        <h2 className="about-bio">about</h2>
                     </div>
                     <div className="terminal-about" id="terminal-about">
                         Formed in January 2020, Cohort B is an experimental-punk outfit 
@@ -41,12 +39,16 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                         "what the fuck?..."
                     </div>
                     <div className="terminal-tag lyrics-tags">
-                        <h3>lyrics</h3>
+                        <h2>lyrics</h2>
+                        <h3 className="project-title">1001 LUKEWARM USA</h3>
                         <div className="song-title" onClick={()=>locateElement('traffic')}>traffic</div>
                         <div className="song-title" onClick={()=>locateElement('dogbite')}>dogbite</div>
                         <div className="song-title" onClick={()=>locateElement('purse')}>purse</div>
                         <div className="song-title" onClick={()=>locateElement('rust')}>rust</div>
                         <div className="song-title" onClick={()=>locateElement('orca')}>orca</div>
+                        <h3 className='project-title redacted'>domeshitz</h3>
+                        <div className="song-title redacted">snafu</div>
+                        <div className="song-title redacted">yee yee</div>
                     </div>
                 </div>
 
@@ -284,6 +286,105 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     trust ill make you over
                     ill try to console ya
                     i adore ya
+                </div>
+                <div className="lyrics lyrics-redacted" id="snafu">
+                    you know
+                    he wanted smoke
+                    he wanted my blood
+                    i gave in to his schievenous eyes 
+                    Rolled back punches 
+                    how soft was that blow? 
+                    “keep it open”
+                    my guard or my options?
+
+                    ive looked him up
+                    made up for lost time
+                    a rude pass at what 
+                    coulda been a good fuck
+                    by the time that 
+                    youd claim 
+                    your word was your bond
+                    ive given up 
+                    just splaining my thoughts 
+                    
+                    “nice kid, he was uh
+                    he had a softness that uh
+                    you couldnt resist
+                    beside him is a
+                    smile hes kept for me
+                    id like to be 
+                    like him OH”
+
+                    ive seen the way you talk to strangers 
+                    when you want something from em
+                    so talk to me nice
+
+                    my cups full, so i keep filling it
+                    trust that my fall is my own doing
+                    my cups full, so i keep filling it
+                    trust that my fall is all my own doing
+
+                    i wanted more than i would admit
+                    i wont expect you to read into this 
+                    youll patiently await a response
+                    this situations normally all fucked
+
+                    this situations normally all fucked
+                    this situations normally all fucked up
+                </div>
+                <div className="lyrics lyrics-redacted" id="yee">
+                    i mind my peace
+                    kiss my dogs
+                    trust my teeth
+
+                    flies
+                    comb the air
+                    i love this job
+                    dont touch my hair
+
+                    theres no life 
+                    cities a bust
+                    trip out
+                    on mass exodus
+                    are you the change that you see?
+                    i hate a bitch named me 
+
+                    dragging
+                    your knuckles on your 
+                    tar spackled jungle
+                    its an
+                    everlasting exposé 
+                    my faults wont cease to 
+                    expose me
+
+                    walked out on his answers
+                    my thoughts remain
+                    on his lack of convictions
+                    much to my surprise 
+                    i gave two decisions
+                    he chose to say
+                    “i cant deny that Ive been really lost these days without her”
+                    
+                    i mind my peace
+                    kiss my dogs
+                    trust my teeth
+
+                    flies
+                    comb the air
+                    i love this job
+                    dont touch my hair
+
+                    theres no life 
+                    cities a bust
+                    trip out
+                    on mass exodus
+                    are you the change that you see?
+                    i hate a bitch named me 
+                </div>
+
+                <div id="what">
+                    ...what?
+                    <audio id="audio-player" src="/songs/snafu_demo.mp3"/>
                 </div>
             </div>
             

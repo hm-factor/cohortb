@@ -304,8 +304,15 @@ html, body, #root, .main {
     padding: 1rem;
 }
 
-.song-title, .lyrics {
+.song-title, .lyrics, .project-title {
     position: relative;
+}
+.song-title:hover, .about-bio:hover {
+    background: white;
+    color: black;
+}
+.song-title:hover {
+    cursor: pointer;
 }
 .redacted::after {
     display: block;
@@ -316,9 +323,8 @@ html, body, #root, .main {
     background: white;
     color: black;
 }
-.song-title:hover, .about-bio:hover {
-    background: white;
-    color: black;
+.redacted:hover {
+    cursor: default;
 }
 .lyrics {
     position: relative;
@@ -332,7 +338,7 @@ html, body, #root, .main {
     width: 100%;
     height: 100%;
 }
-.lyrics-redacted:hover:after {
+.lyrics-redacted:after {
     display: flex;
     justify-content: center;
     align-items: center;
