@@ -414,12 +414,6 @@ html, body, #root, .main {
     background: var(--forest-green);
 }
 
-/* .announcement-content {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-} */
-
 .show-content, .release-content {
     display: flex;
     flex-direction: column;
@@ -430,16 +424,16 @@ html, body, #root, .main {
     padding: 1rem 0;
     position: relative;
 }
-.show-info, .release-info {
+.show-info, .release-info, .noClick {
     width: 70%;
     margin: 1rem 0;
     border: 1px solid var(--almost-white);
     padding: 1rem;
     color: var(--almost-white);
 }
-.show-info:nth-child(even) {
+/* .show-info:nth-child(even) {
     border: 1px solid var(--darker-green);
-}
+} */
 .show-info:hover, .release-info:hover {
     background: var(--mustard);
     color: var(--almost-black);
@@ -449,12 +443,10 @@ html, body, #root, .main {
     background-image: url(./art/trees.JPG);
     background-position: center;
 }
-.noClick {
-    pointer-events: none;
-}
-.noClick:hover {
+.noClick:hover, .noClick:active {
     border: 1px solid red;
     color: red;
+    cursor: not-allowed;
 }
 
 @media (max-width: 1024px) {

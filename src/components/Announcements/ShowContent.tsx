@@ -1,6 +1,6 @@
 export default function ShowContent() {
     
-    // place, date, link
+    // place, date, link, active
     let showInfo = [
         {
             where:'Baby\'s All Right', 
@@ -36,12 +36,23 @@ export default function ShowContent() {
         <div className="show-content">
             {showInfo.map( (info) => {
                 const {where, when, how, active} = info;
-                
-                return (
-                    <div className={`show-info ${active ? '' : 'noClick'}`} onClick={()=>openLink(how)}>
+
+                let content = active ? (
+                    <div className='show-info' onClick={()=>openLink(how)}>
                         <div>{where}</div>
                         <div>{when}</div>
                     </div>
+                ) : (
+                    <div className='noClick'>
+                        <div>{where}</div>
+                        <div>{when}</div>
+                    </div>
+                );
+                
+                return (
+                    <>
+                        {content}
+                    </>
                 )
             })}
         </div>
