@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface terminalPopupProps {
     isTerminal: Boolean;
     setIsTerminal: Function;
@@ -23,6 +25,16 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
         'rust',
         'orca'
     ]
+
+    const [audio] = useState(new Audio("/songs/snafu_short.mp3"));
+    function hoverPlay() {
+        console.log('snafu')
+        audio.play()
+    }
+    function stopPlay() {
+        audio.pause()
+        audio.currentTime = 0;
+    }
 
     return (
         <div className={`terminal-popup ${isTerminal ? '' : 'off'}`}>
@@ -390,9 +402,10 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     i hate a bitch named me 
                 </div>
 
-                <div id="what">
+                <div className="break"></div>
+
+                <div onMouseOver={hoverPlay} onMouseLeave={stopPlay} id="what" className="what">
                     ...what?
-                    <audio id="audio-player" src="/songs/snafu_demo.mp3"/>
                 </div>
             </div>
             

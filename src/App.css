@@ -31,7 +31,6 @@ html, body, #root, .main {
     height: 100%;
 }
 
-/* RUST MAIN */
 
 .main-container {
     height: 100%;
@@ -46,57 +45,6 @@ html, body, #root, .main {
 
     user-select: none;
     overflow: hidden;
-}
-
-.rust-nav {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    bottom: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    width: fit-content;
-    height: fit-content;
-    padding: 2rem;
-    box-shadow: -2px 2px 3px 1px rgb(0 0 0 / 30%);
-    background: darkred;
-
-    font-family: prompt;
-}
-
-.dogbite-main {
-    height: 100%;
-    width: 100%;
-    position: relative;
-
-    background-image: url('./art/rain.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    user-select: none;
-    overflow: hidden;
-}
-
-.dogbite-nav {
-    position: absolute;
-    bottom: 0;
-    right: calc(50% + 224.55px);
-    left: calc(50% - 224.55px);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    width: fit-content;
-    height: fit-content;
-    padding: 2rem;
-    box-shadow: -2px 2px 3px 1px rgb(0 0 0 / 30%);
-    background: darkred;
-
-    font-family: prompt;
 }
 
 /* 1001 LUKEWARM USA */
@@ -429,6 +377,33 @@ html, body, #root, .main {
     border: 1px solid red;
     color: red;
     cursor: not-allowed;
+}
+
+
+.what {
+    padding: 1rem;
+    float: right;
+    position: relative;
+}
+.what:after {
+    display: none;
+    position: absolute;
+    content: "huh?";
+    background: darkred;
+    color: black;
+    top: 0;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+}
+.what:hover:after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.break {
+    height: 2000px;
 }
 
 @media (max-width: 1024px) {
