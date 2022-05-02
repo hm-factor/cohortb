@@ -1,7 +1,7 @@
 export default function ReleaseContent() {
 
     let releaseInfo = [
-        ['EP', '1001 Lukewarm USA', 'https://distrokid.com/hyperfollow/cohortb/1001-lukewarm-usa'],
+        ['EP', '1001 Lukewarm USA', 'https://open.spotify.com/album/201chFE3e1UFZhlRLHOjnb?si=tnpSul-sSqmvlG1B_RJxiQ'],
         ['Single', 'Dog Bite', 'https://cohortbbb.bandcamp.com/track/dog-bite'],
         ['Single', 'Rust', 'https://cohortbbb.bandcamp.com/track/rust']
     ]
