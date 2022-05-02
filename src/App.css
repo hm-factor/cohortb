@@ -403,7 +403,7 @@ html, body, #root, .main {
 }
 
 .break {
-    height: 2000px;
+    height: 4500px;
 }
 
 @media (max-width: 1024px) {
