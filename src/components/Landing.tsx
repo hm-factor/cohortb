@@ -8,6 +8,7 @@ import Announcements from "./Announcements/Announcements";
 
 import polaroid from '../art/ep_polaroid.png';
 import cohort_logo from '../art/cohort_logo.PNG';
+import cohort_logo_mobile from '../art/cohort_logo_mobile.PNG';
 
 import { AppBar, Box} from "@mui/material";
 import camera from "../icons/camera.png"
@@ -103,7 +104,7 @@ export default function Landing() {
                 {mobile && (
                     <div className="mobile-banner">
                         <NavLink to="/" className="cohort-logo-mobile">
-                            <img src={cohort_logo} alt="cohort-logo" />    
+                            <img src={cohort_logo_mobile} alt="cohort-logo_mobile" />    
                         </NavLink>
                     </div>
                 )}
