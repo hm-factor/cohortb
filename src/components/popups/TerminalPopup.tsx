@@ -16,6 +16,14 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
         }
     }
 
+    const songs = [
+        'traffic',
+        'dogbite',
+        'purse',
+        'rust',
+        'orca'
+    ]
+
     return (
         <div className={`terminal-popup ${isTerminal ? '' : 'off'}`}>
             <div className="terminal-nav">
@@ -41,11 +49,11 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                     <div className="terminal-tag lyrics-tags">
                         <h2>lyrics</h2>
                         <h3 className="project-title">1001 LUKEWARM USA</h3>
-                        <div className="song-title" onClick={()=>locateElement('traffic')}>traffic</div>
-                        <div className="song-title" onClick={()=>locateElement('dogbite')}>dogbite</div>
-                        <div className="song-title" onClick={()=>locateElement('purse')}>purse</div>
-                        <div className="song-title" onClick={()=>locateElement('rust')}>rust</div>
-                        <div className="song-title" onClick={()=>locateElement('orca')}>orca</div>
+                        {songs.map((song) => {
+                            return (
+                                <div className="song-title" onClick={()=>locateElement(song)}>{song}</div>
+                            )    
+                        })}
                         <h3 className='project-title redacted'>domeshitz</h3>
                         <div className="song-title redacted">snafu</div>
                         <div className="song-title redacted">yee yee</div>
