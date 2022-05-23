@@ -69,6 +69,8 @@ export default function TerminalPopup({isTerminal, setIsTerminal}:terminalPopupP
                         <h3 className='project-title redacted'>domeshitz</h3>
                         <div className="song-title redacted">snafu</div>
                         <div className="song-title redacted">yee yee</div>
+                        <div className="song-title redacted">hubble</div>
+                        <div className="song-title redacted">gaze</div>
                     </div>
                 </div>
 
