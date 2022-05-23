@@ -3,14 +3,20 @@ export default function ShowContent() {
     // place, date, link, active
     let showInfo = [
         {
-            where:'Baby\'s All Right', 
-            when:'Tuesday May 10th', 
-            how:'https://www.seetickets.us/event/Cohort-B/479978', 
-            active:true
+            where:'St Vitus', 
+            when:'Thursday June 16th', 
+            how:'', 
+            active:false
         },
         {
             where:'Purgatory', 
             when:'Sunday June 19th', 
+            how:'', 
+            active:false
+        },
+        {
+            where:'Trans Pecos', 
+            when:'Tuesday June 28', 
             how:'', 
             active:false
         },
@@ -21,8 +27,20 @@ export default function ShowContent() {
             active:false
         },
         {
+            where:'Our Wicked Lady', 
+            when:'Tuesday June 12th', 
+            how:'', 
+            active:false
+        },
+        {
             where:'Mercury Lounge', 
-            when:'Sunday July 17th', 
+            when:'Monday July 18th', 
+            how:'', 
+            active:false
+        },
+        {
+            where:'The Broadway', 
+            when:'Friday August 19th', 
             how:'', 
             active:false
         },
