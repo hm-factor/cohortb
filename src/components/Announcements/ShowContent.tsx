@@ -5,8 +5,8 @@ export default function ShowContent() {
         {
             where:'St Vitus', 
             when:'Thursday June 16th', 
-            how:'', 
-            active:false
+            how:'https://dice.fm/event/2prxm-smock-cronies-cohort-b-grave-blankets-16th-jun-saint-vitus-bar-new-york-tickets?pid=5456a411&_branch_match_id=711984420778857475&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1Q%2BxSLZMMkpOM0pJMbMvyEyxNTUxNUs0MTQEABKKxDouAAAA', 
+            active: true
         },
         {
             where:'Purgatory', 
@@ -28,19 +28,13 @@ export default function ShowContent() {
         },
         {
             where:'Our Wicked Lady', 
-            when:'Tuesday June 12th', 
-            how:'', 
-            active:false
-        },
-        {
-            where:'Mercury Lounge', 
-            when:'Monday July 18th', 
+            when:'Tuesday July 12th', 
             how:'', 
             active:false
         },
         {
             where:'The Broadway', 
-            when:'Friday August 19th', 
+            when:'Thursday August 35th', 
             how:'', 
             active:false
         },
