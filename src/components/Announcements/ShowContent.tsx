@@ -11,8 +11,8 @@ export default function ShowContent() {
         {
             where:'Purgatory', 
             when:'Sunday June 19th', 
-            how:'', 
-            active:false
+            how:'https://dice.fm/event/3ed3v-cohort-b-huffers-don-pardo-pseudobliss-19th-jun-purgatory-new-york-tickets', 
+            active: true
         },
         {
             where:'Trans Pecos', 
