@@ -1,6 +1,6 @@
-### FKA Bnuoq Band Website
+### COHORT B Website
 
-# Instructions
+# Run Locally
 
 This is simply a frontend project for now.
 
