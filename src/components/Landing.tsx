@@ -6,125 +6,141 @@ import { SoundPopup } from "./popups/SoundPopup";
 import TerminalPopup from "./popups/TerminalPopup";
 import Announcements from "./Announcements/Announcements";
 
-import polaroid from '../art/ep_polaroid.png';
-import cohort_logo from '../art/cohort_logo.PNG';
-import cohort_logo_mobile from '../art/cohort_logo_mobile.PNG';
+import polaroid from "../art/ep_polaroid.png";
+import cohort_logo from "../art/cohort_logo.PNG";
+import cohort_logo_mobile from "../art/cohort_logo_mobile.PNG";
 
-import { AppBar, Box} from "@mui/material";
-import camera from "../icons/camera.png"
-import ear from "../icons/ear.png"
-import shows from "../icons/show.png"
-import info from "../icons/info.png"
+import { AppBar, Box } from "@mui/material";
+import camera from "../icons/camera.png";
+import ear from "../icons/ear.png";
+import shows from "../icons/show.png";
+import info from "../icons/info.png";
 
 function NavBar() {
-    
-    return (
-        <nav className="LWU-nav">
-            <NavLink to="/" className="cohort-logo">
-                <img src={cohort_logo} alt="cohort-logo" />    
-            </NavLink>
-            <div className="LWU-nav-elements">
-                <NavLink to="/sound" className="nav-element">SOUND</NavLink>
-                <NavLink to="/announcements" className="nav-element">ANNOUNCEMENTS</NavLink>
-                <NavLink to="/photos" className="nav-element">PHOTO</NavLink>
-                <NavLink to="/info" className="nav-element">INFO</NavLink>
-            </div>
-        </nav>
-    )
+  return (
+    <nav className="LWU-nav">
+      <NavLink to="/" className="cohort-logo">
+        <img src={cohort_logo} alt="cohort-logo" />
+      </NavLink>
+      <div className="LWU-nav-elements">
+        <NavLink to="/sound" className="nav-element">
+          SOUND
+        </NavLink>
+        <NavLink to="/announcements" className="nav-element">
+          ANNOUNCEMENTS
+        </NavLink>
+        <NavLink to="/photos" className="nav-element">
+          PHOTO
+        </NavLink>
+        <NavLink to="/info" className="nav-element">
+          INFO
+        </NavLink>
+      </div>
+    </nav>
+  );
 }
 
 function MobileNavBar() {
+  const NavLinkInfo = [
+    { link: "/sound", btnIcon: ear },
+    { link: "/announcements", btnIcon: shows },
+    { link: "/photos", btnIcon: camera },
+    { link: "/info", btnIcon: info },
+  ];
 
-    const NavLinkInfo = [
-        {link:"/sound", btnIcon:ear},
-        {link:"/announcements", btnIcon:shows},
-        {link:"/photos", btnIcon:camera},
-        {link:"/info", btnIcon:info},
-    ]
+  return (
+    <AppBar
+      position="fixed"
+      sx={{
+        top: "auto",
+        bottom: 0,
+        backgroundColor: "rgb(28, 28, 28)",
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          backgroundColor: "rgb(236, 224, 192)",
+        }}
+      >
+        {NavLinkInfo.map((NavLinkItem) => {
+          let { link, btnIcon } = NavLinkItem;
 
-    return (
-        <AppBar 
-            position="fixed" 
-            sx={{ 
-                top: 'auto', 
-                bottom: 0, 
-                backgroundColor: "rgb(28, 28, 28)",
-            }}
-        >
-            <Box
-                sx={{
-                    display:"flex",
-                    flexDirection:"row",
-                    justifyContent:"space-evenly",
-                    backgroundColor:"rgb(236, 224, 192)"
-                }}
-            >
-                {NavLinkInfo.map((NavLinkItem) => {
-                    let {link, btnIcon} = NavLinkItem;
-
-                    return (
-                        <NavLink to={`${link}`} className="nav-element">
-                            <img src={btnIcon} alt="ha" />
-                        </NavLink>
-                    )
-                })}
-            </Box>
-        </AppBar>
-    )
+          return (
+            <NavLink to={`${link}`} className="nav-element">
+              <img src={btnIcon} alt="ha" />
+            </NavLink>
+          );
+        })}
+      </Box>
+    </AppBar>
+  );
 }
 
 export default function Landing() {
-    const [isTerminal, setIsTerminal] = useState<boolean>(false);
-    const [dimensions, setDimensions] = useState({ 
+  const [isTerminal, setIsTerminal] = useState<boolean>(false);
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
+  const [mobile, setMobile] = useState<boolean>(dimensions.width <= 1024);
+
+  useEffect(() => {
+    function handleResize() {
+      setDimensions({
         height: window.innerHeight,
-        width: window.innerWidth
-    });
-    const [mobile, setMobile] = useState<boolean>(dimensions.width <= 1024);
+        width: window.innerWidth,
+      });
+    }
 
-    useEffect(() => {
-        function handleResize() {
-            setDimensions({
-                height: window.innerHeight,
-                width: window.innerWidth
-            })
-        }
+    window.addEventListener("resize", handleResize);
+    setMobile(dimensions.width <= 900);
+  }, [dimensions.width]);
 
-        window.addEventListener('resize', handleResize)
-        setMobile(dimensions.width <= 900)
-    }, [dimensions.width]);
-
-    return (
-        <div className="background-container">
-            <div className="react-player-wrapper">
-                <video autoPlay loop muted className="react-player" >
-                    <source src='/videos/orca_loop.mp4' type="video/mp4"/>
-                </video>
-            </div>
-            <div className="LWU-main">
-                {mobile && (
-                    <div className="mobile-banner">
-                        <NavLink to="/" className="cohort-logo-mobile">
-                            <img src={cohort_logo_mobile} alt="cohort-logo_mobile" />    
-                        </NavLink>
-                    </div>
-                )}
-                <img src={polaroid} alt="polaroid" className="polaroid"/>
-                <div className="polaroid-text">
-                    <a 
-                        href="https://open.spotify.com/artist/1rnMxenrTZyuttAhlEC5H2?si=KuW3G7RUR-C4xo5iZ4jTlw" 
-                        rel="noreferrer" 
-                        target="_blank"
-                    >1001 LUKEWARM USA</a> OUT NOW 
-                </div>
-                <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>
-                {mobile ? <MobileNavBar/> : <NavBar/>}
-                <Routes>
-                    <Route path="sound" element={<SoundPopup />} />
-                    <Route path="announcements" element={<Announcements />} />
-                    <Route path="photos" element={<PhotoPopup />} />
-                    <Route path="info" element={<InfoPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal}/>} />
-                </Routes>
-            </div>
+  return (
+    <div className="background-container">
+      <div className="react-player-wrapper">
+        <video autoPlay loop muted className="react-player">
+          <source src="/videos/orca_loop.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div className="LWU-main">
+        {mobile && (
+          <div className="mobile-banner">
+            <NavLink to="/" className="cohort-logo-mobile">
+              <img src={cohort_logo_mobile} alt="cohort-logo_mobile" />
+            </NavLink>
+          </div>
+        )}
+        <img src={polaroid} alt="polaroid" className="polaroid" />
+        <div className="polaroid-text">
+          <a
+            href="https://leestavall.com/collections/preorders/products/cohortb"
+            rel="noreferrer"
+            target="_blank"
+          >
+            LEESTA VALL VINYL SESSION PREORDER
+          </a>
         </div>
-    )
+        <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal} />
+        {mobile ? <MobileNavBar /> : <NavBar />}
+        <Routes>
+          <Route path="sound" element={<SoundPopup />} />
+          <Route path="announcements" element={<Announcements />} />
+          <Route path="photos" element={<PhotoPopup />} />
+          <Route
+            path="info"
+            element={
+              <InfoPopup
+                isTerminal={isTerminal}
+                setIsTerminal={setIsTerminal}
+              />
+            }
+          />
+        </Routes>
+      </div>
+    </div>
+  );
 }
