@@ -1,5 +1,6 @@
 export default function ReleaseContent() {
   let releaseInfo = [
+    ["Bjork Cover", "Google Form", "https://forms.gle/Sty1uCpMRKzaBhir7"],
     [
       "Leesta Vall",
       "Vinyl Preorder",
