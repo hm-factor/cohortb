@@ -2,7 +2,7 @@ export default function ShowContent() {
   // place, date, link, active
   let showInfo = [
     {
-      where: "Mainline Mosh",
+      where: "Mainline Mosh - New Paltz",
       when: "Saturday April 1",
       how: "",
       active: false,
