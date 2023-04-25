@@ -117,11 +117,11 @@ export default function Landing() {
         <img src={polaroid} alt="polaroid" className="polaroid" />
         <div className="polaroid-text">
           <a
-            href="https://leestavall.com/collections/preorders/products/cohortb"
+            href="https://cohortbbb.bandcamp.com/"
             rel="noreferrer"
             target="_blank"
           >
-            LEESTA VALL VINYL SESSION PREORDER
+            BUY 1001LUKEWARMUSA
           </a>
         </div>
         <TerminalPopup isTerminal={isTerminal} setIsTerminal={setIsTerminal} />
