@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ShowContent from "./ShowContent";
 import ReleaseContent from "./ReleaseContent";
 
