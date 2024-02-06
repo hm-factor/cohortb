@@ -39,7 +39,6 @@ body,
   width: 100%;
   position: relative;
 
-  background-image: url("./art/trash.png");
   background-position-x: -200px;
   background-position-y: -200px;
   background-size: 1800px;
