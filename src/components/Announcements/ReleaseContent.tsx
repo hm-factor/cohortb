@@ -4,6 +4,7 @@ import bjork_cover from "../../art/bjork_cover.png";
 import trees from "../../art/trees.JPG";
 import dog_single from "../../art/rain.jpeg";
 import rust_single from "../../art/blue_rust.jpg";
+import lwu_cover from "../../art/1001lwu.JPG";
 
 export default function ReleaseContent() {
   let releaseInfo = [
@@ -29,7 +30,7 @@ export default function ReleaseContent() {
       "EP",
       "1001 Lukewarm USA",
       "https://cohortbbb.bandcamp.com/album/1001-lukewarm-usa",
-      ants_cover,
+      lwu_cover,
     ],
     [
       "Single",
