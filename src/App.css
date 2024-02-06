@@ -548,7 +548,9 @@ body,
 
 @media (max-width: 1024px) {
   .mobile-banner {
+    position: relative;
     width: 100%;
+    bottom: 0;
     display: flex;
     justify-content: center;
   }
@@ -568,40 +570,6 @@ body,
     align-items: center;
   }
 
-  .dogbite-main {
-    height: 100%;
-  }
-
-  .rust-nav {
-    bottom: 0;
-    top: unset;
-    right: unset;
-    width: 100%;
-    padding: unset;
-
-    padding: 1rem 0;
-  }
-  .dogbite-nav {
-    bottom: 0;
-    right: unset;
-    left: unset;
-    width: 100%;
-    padding: unset;
-
-    padding: 1rem 0;
-  }
-
-  .nav-element {
-    display: flex;
-    justify-content: center;
-    color: var(--almost-black);
-    font-family: prompt;
-  }
-  .nav-element.active {
-    background-color: transparent;
-    border: 1px solid rgb(65, 65, 65);
-  }
-
   .popup-content {
     top: 20%;
     right: unset;
@@ -611,38 +579,32 @@ body,
     align-items: center;
   }
 
-  .terminal-popup {
-    position: absolute;
-    top: 5rem;
+  .announcement-container {
+    top: 0;
+    width: 100%;
+    height: 100%;
     left: unset;
     right: unset;
-    bottom: unset;
-
-    width: 100%;
-    height: 70%;
   }
 
-  .announcement-container {
-    top: 20%;
+  .mobile-banner {
+    position: absolute;
+    bottom: 0;
+    height: 140px;
+    background-color: black;
   }
 
   .cohort-logo-mobile {
-    top: 0;
+    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: center;
+    -webkit-filter: invert(1);
+    filter: invert(1);
   }
 
-  .polaroid {
-    top: 20%;
-  }
-  .polaroid-text {
-    top: 71%;
-  }
-  .polaroid-text a {
-    background: rgb(36, 35, 35, 0.6);
-    border-radius: 3px;
-    padding: 0 0.2rem;
+  .release-content {
+    height: 75%;
   }
 
   .epk-row {
