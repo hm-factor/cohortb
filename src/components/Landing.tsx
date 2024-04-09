@@ -58,7 +58,6 @@ export default function Landing() {
             isTerminal={isTerminal}
             setIsTerminal={setIsTerminal}
           />
-          <NavBar />
           <Routes>
             <Route path="announcements" element={<Announcements />} />
             <Route
@@ -73,6 +72,7 @@ export default function Landing() {
             />
             <Route path="epk" element={<Epk />} />
           </Routes>
+          <NavBar />
         </div>
       )}
     </div>

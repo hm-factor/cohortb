@@ -2,17 +2,35 @@ import React from "react";
 
 export default function ShowContent() {
   // place, date, link, active
+  // {
+  //   where: ,
+  //   when: ,
+  //   how: ,
+  //   active: ,
+  // },
   let showInfo = [
     {
-      where: "Mercury Lounge, NY",
-      when: "Sunday Mar 31",
-      how: "https://mercuryeastpresents.com/tm-event/sleepwell-holiem-glimmer-cohort-b/",
+      where: "Monkey House, VT",
+      when: "Tuesday April 23",
+      how: "https://www.instagram.com/monkeyhouse_vt/?hl=en",
       active: true,
     },
     {
-      where: "The Broadway, NY",
-      when: "Friday Apr 4",
-      how: "https://www.eventbrite.com/e/tula-vera-w-drook-cohort-b-tickets-819267730837?aff=oddtdtcreator",
+      where: "DM 4 ADDY, MA",
+      when: "Wednesday April 24",
+      how: "",
+      active: true,
+    },
+    {
+      where: "Stupid Baby, PA",
+      when: "Thursday April 25",
+      how: "https://www.instagram.com/stupidbabyphl/?locale=fr",
+      active: true,
+    },
+    {
+      where: "DM 4 ADDY, NYC",
+      when: "Sunday April 28",
+      how: "",
       active: true,
     },
   ];

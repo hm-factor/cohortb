@@ -58,7 +58,7 @@ body,
 .LWU-main {
   height: 100%;
   width: 100%;
-  position: relative;
+  display: flex;
 
   user-select: none;
   overflow: hidden;
@@ -116,10 +116,7 @@ body,
 }
 
 .LWU-nav {
-  position: absolute;
-  bottom: unset;
-  top: 0rem;
-  right: 0rem;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -320,16 +317,9 @@ body,
 }
 
 .announcement-container {
-  position: absolute;
-  left: calc(50% - var(--polaroid-width));
-  right: calc(50% + var(--polaroid-width));
-  top: 15%;
-  height: 50%;
-  width: calc(50vh * 0.7);
-
-  background: black;
+  background: transparent;
   color: var(--lavender);
-  box-shadow: -5px 5px 5px rgb(0 0 0 / 70%);
+  flex-grow: 1;
 
   overflow: hidden;
 }
