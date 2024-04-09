@@ -6,7 +6,7 @@ function NavBar() {
   const [currPath, setCurrPath] = React.useState(window.location.pathname);
 
   return (
-    <nav className={`${currPath === "/epk" ? "epk-nav" : "LWU-nav"}`}>
+    <div className={`${currPath === "/epk" ? "epk-nav" : "LWU-nav"}`}>
       <NavLink to="/" className="cohort-logo" onClick={() => setCurrPath("/")}>
         <img src={cohort_logo} alt="cohort-logo" className="cohort-logo" />
       </NavLink>
@@ -30,7 +30,7 @@ function NavBar() {
           INFO
         </NavLink>
       </div>
-    </nav>
+    </div>
   );
 }
 
