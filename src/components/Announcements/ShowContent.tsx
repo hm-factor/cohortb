@@ -2,23 +2,35 @@ import React from "react";
 
 export default function ShowContent() {
   // place, date, link, active
+  // {
+  //   where: ,
+  //   when: ,
+  //   how: ,
+  //   active: ,
+  // },
   let showInfo = [
     {
-      where: "Trans Pecos, NY",
-      when: "Friday Feb 9",
-      how: "https://www.venuepilot.co/events/94547/orders/new#/",
+      where: "Monkey House, VT",
+      when: "Tuesday April 23",
+      how: "https://www.instagram.com/monkeyhouse_vt/?hl=en",
       active: true,
     },
     {
-      where: "The Broadway, NY",
-      when: "Thursday Feb 15",
-      how: "https://www.eventbrite.com/e/mother-cell-w-fatboi-sharif-cronies-cohort-b-tickets-798935687147?aff=oddtdtcreator",
+      where: "DM 4 ADDY, MA",
+      when: "Wednesday April 24",
+      how: "",
       active: true,
     },
     {
-      where: "Saint Vitus, NY",
-      when: "Friday Mar 1",
-      how: "https://dice.fm/event/axvpd-couch-slut-splinternet-cohort-b-eaten-by-bees-1st-mar-saint-vitus-bar-new-york-tickets?pid=5456a411&_branch_match_id=1090979828181667380&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8nMy9ZLyUxO1UvL1Q9NtkhJNLAwskg2SLMvyEyxNTUxNUs0MTQEANx5rJkuAAAA",
+      where: "Stupid Baby, PA",
+      when: "Thursday April 25",
+      how: "https://www.instagram.com/stupidbabyphl/?locale=fr",
+      active: true,
+    },
+    {
+      where: "DM 4 ADDY, NYC",
+      when: "Sunday April 28",
+      how: "",
       active: true,
     },
   ];
