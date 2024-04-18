@@ -10,15 +10,15 @@ export default function ShowContent() {
   // },
   let showInfo = [
     {
-      where: "Monkey House, VT",
+      where: "Light Club Lamp Shop, VT",
       when: "Tuesday April 23",
-      how: "https://www.instagram.com/monkeyhouse_vt/?hl=en",
+      how: "https://www.instagram.com/lightclublampshop/?hl=en",
       active: true,
     },
     {
       where: "DM 4 ADDY, MA",
       when: "Wednesday April 24",
-      how: "",
+      how: "https://www.instagram.com/cohortbbb/?hl=en",
       active: true,
     },
     {
@@ -30,7 +30,7 @@ export default function ShowContent() {
     {
       where: "DM 4 ADDY, NYC",
       when: "Sunday April 28",
-      how: "",
+      how: "https://www.instagram.com/cohortbbb/?hl=en",
       active: true,
     },
   ];
