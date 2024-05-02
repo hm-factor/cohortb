@@ -10,27 +10,9 @@ export default function ShowContent() {
   // },
   let showInfo = [
     {
-      where: "Light Club Lamp Shop, VT",
-      when: "Tuesday April 23",
-      how: "https://www.instagram.com/lightclublampshop/?hl=en",
-      active: true,
-    },
-    {
-      where: "DM 4 ADDY, MA",
-      when: "Wednesday April 24",
-      how: "https://www.instagram.com/cohortbbb/?hl=en",
-      active: true,
-    },
-    {
-      where: "Stupid Baby, PA",
-      when: "Thursday April 25",
-      how: "https://www.instagram.com/stupidbabyphl/?locale=fr",
-      active: true,
-    },
-    {
-      where: "DM 4 ADDY, NYC",
-      when: "Sunday April 28",
-      how: "https://www.instagram.com/cohortbbb/?hl=en",
+      where: "Trans Pecos, NY",
+      when: "Thurs May, 16",
+      how: "https://www.thetranspecos.com/cal/2024/5/16/wiring-naras-room-screenager-cohort-b",
       active: true,
     },
   ];
