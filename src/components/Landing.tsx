@@ -12,7 +12,7 @@ import cohort_logo_mobile from "../art/cohort_logo_mobile.PNG";
 
 const MobileLanding = () => {
   return (
-    <div className="LWU-main">
+    <div className="landing-main">
       <Announcements />
       <div className="mobile-banner">
         <NavLink to="/" className="cohort-logo-mobile">
@@ -40,7 +40,7 @@ export default function Landing() {
     }
 
     window.addEventListener("resize", handleResize);
-    setMobile(dimensions.width <= 900);
+    setMobile(dimensions.width <= 600);
   }, [dimensions.width]);
 
   return (
@@ -53,7 +53,8 @@ export default function Landing() {
       {mobile ? (
         <MobileLanding />
       ) : (
-        <div className="LWU-main">
+        <div className="landing-main">
+          <NavBar />
           <TerminalPopup
             isTerminal={isTerminal}
             setIsTerminal={setIsTerminal}
@@ -72,7 +73,6 @@ export default function Landing() {
             />
             <Route path="epk" element={<Epk />} />
           </Routes>
-          <NavBar />
         </div>
       )}
     </div>
