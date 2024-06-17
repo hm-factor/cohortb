@@ -91,18 +91,19 @@ body,
   text-decoration: underline;
 }
 
-.react-player-wrapper {
+.background-wrapper {
   width: 100%;
   height: 100%;
   z-index: -1;
   position: fixed;
   top: 0;
   left: 0;
+  background-color: black;
 }
-.react-player {
+.background-wrapper img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
 }
 
 .nav-element {
@@ -328,11 +329,11 @@ body,
   border: 1px solid transparent;
 }
 .announcement-nav-element:hover {
-  border: 1px solid var(--mustard);
+  border: 1px solid #004eb2;
   cursor: pointer;
 }
 .nav-selected {
-  background: var(--forest-green);
+  background: #f9769b;
 }
 
 .show-content,
@@ -357,7 +358,7 @@ body,
 }
 .show-info:hover,
 .release-info:hover {
-  background: var(--mustard);
+  background: #f6e5f6;
   color: var(--almost-black);
   cursor: pointer;
 }

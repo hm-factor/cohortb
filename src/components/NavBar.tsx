@@ -27,7 +27,7 @@ function NavBar() {
           className="nav-element"
           onClick={() => setCurrPath("/info")}
         >
-          INFO
+          LINKS
         </NavLink>
       </div>
     </div>

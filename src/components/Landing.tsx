@@ -8,6 +8,7 @@ import TerminalPopup from "./popups/TerminalPopup";
 import Announcements from "./Announcements/Announcements";
 import Epk from "./Epk";
 
+import blue_face_snafu from "../art/blue_face_snafu.PNG";
 import cohort_logo_mobile from "../art/cohort_logo_mobile.PNG";
 
 const MobileLanding = () => {
@@ -45,10 +46,8 @@ export default function Landing() {
 
   return (
     <div className="background-container">
-      <div className="react-player-wrapper">
-        <video autoPlay loop muted className="react-player">
-          <source src="/videos/yee_promo.mp4" type="video/mp4" />
-        </video>
+      <div className="background-wrapper">
+        <img src={blue_face_snafu} alt="blue-snafu" />
       </div>
       {mobile ? (
         <MobileLanding />
