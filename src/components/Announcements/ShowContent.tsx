@@ -10,10 +10,10 @@ export default function ShowContent() {
   // },
   let showInfo = [
     {
-      where: "Trans Pecos, NY",
-      when: "Thurs May, 16",
-      how: "https://www.thetranspecos.com/cal/2024/5/16/wiring-naras-room-screenager-cohort-b",
-      active: true,
+      where: "El Dorado, Troy",
+      when: "Sun June, 23",
+      how: "",
+      active: false,
     },
     {
       where: "The Garrison, Toronto",
@@ -32,6 +32,12 @@ export default function ShowContent() {
       when: "Thurs June, 27",
       how: "https://obrienspubboston.com/show/lip-critic/",
       active: true,
+    },
+    {
+      where: "Gold Sounds, NYC",
+      when: "Sat June, 29",
+      how: "",
+      active: false,
     },
   ];
 
