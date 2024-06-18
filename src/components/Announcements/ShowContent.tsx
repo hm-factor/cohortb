@@ -1,13 +1,7 @@
 import React from "react";
 
 export default function ShowContent() {
-  // place, date, link, active
-  // {
-  //   where: ,
-  //   when: ,
-  //   how: ,
-  //   active: ,
-  // },
+  // place, date, link, hover
   let showInfo = [
     {
       where: "El Dorado, Troy",
@@ -36,8 +30,8 @@ export default function ShowContent() {
     {
       where: "Gold Sounds, NYC",
       when: "Sat June, 29",
-      how: "",
-      active: false,
+      how: "https://dice.fm/event/k66pqo-cohort-b-wince-secret-child-eater-29th-jun-gold-sounds-new-york-tickets?lng=en-US",
+      active: true,
     },
   ];
 
