@@ -373,6 +373,10 @@ body,
   cursor: not-allowed;
 }
 
+.show-who {
+  font-size: 32px;
+}
+
 .release-img {
   width: 100%;
   height: auto;
