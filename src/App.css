@@ -372,6 +372,9 @@ body,
   color: red;
   cursor: not-allowed;
 }
+.show-header {
+  font-size: 2rem;
+}
 
 .release-img {
   width: 100%;
