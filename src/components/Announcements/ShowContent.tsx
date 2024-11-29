@@ -4,13 +4,6 @@ export default function ShowContent() {
   // place, date, link, hover
   let showInfo = [
     {
-      who: "A DEER A HORSE, NETHERLANDS",
-      where: "Main Drag, NYC",
-      when: "Fri Oct, 11",
-      how: "https://maindragmusic.com/collections/live-at-main-drag/products/10-11-24-a-deer-a-horse-cohort-b-special-guest-tba",
-      active: true,
-    },
-    {
       who: "THE JESUS LIZARD",
       where: "Brooklyn Steel, NYC",
       when: "Wed Dec, 11",
